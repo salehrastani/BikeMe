@@ -1,6 +1,6 @@
-BIKEME
+#BIKEME
 
-User Stories (users would be able to...):
+##User Stories ###(users would be able to...):
  - create an account
  - login to and logout of account
  - enter financial credentials
@@ -14,7 +14,7 @@ User Stories (users would be able to...):
  - see my origin and destination pin
 
 
- Technologies:
+ ##Technologies:
   - PostgresQL DB
   - Ruby on Rails
   - Angular
