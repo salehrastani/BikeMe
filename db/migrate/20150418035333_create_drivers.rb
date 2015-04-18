@@ -6,7 +6,6 @@ class CreateDrivers < ActiveRecord::Migration
       t.string :password
       t.string :phone_number
       t.string :image
-      t.integer :vehicles_id
 
       t.timestamps null: false
     end

@@ -5,8 +5,8 @@ class CreateTrips < ActiveRecord::Migration
       t.string :destination
       t.string :duration
       t.integer :price
-      t.integer :drivers_id
-      t.integer :users_id
+      t.integer :driver_id
+      t.integer :passenger_id
 
       t.timestamps null: false
     end
