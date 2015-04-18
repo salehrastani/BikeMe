@@ -4,7 +4,7 @@ class CreateTrips < ActiveRecord::Migration
       t.string :origin
       t.string :destination
       t.string :duration
-      t.string :price
+      t.integer :price
       t.integer :drivers_id
       t.integer :users_id
 
