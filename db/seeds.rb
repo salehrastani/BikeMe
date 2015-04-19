@@ -6,7 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-10.times do
-  User.create()
 
+# require 'faker'
+
+5.times do
+  Passenger.create(name: Faker::Name.name, email: Faker::Internet.email,)
 end
+
+# 5.times do
+#   Driver.create()
+# end
+
+# drivers = Driver.all
+
+# drivers.each do |driver|
+# driver.vehicles.create(make: "honda", model: "civic", driver_id: driver.id)
+# end
+
