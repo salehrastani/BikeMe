@@ -521,3 +521,257 @@ ORDER BY c.conname
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "trips" ("driver_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["driver_id", 5], ["created_at", "2015-04-19 19:00:16.172341"], ["updated_at", "2015-04-19 19:00:16.172341"]]
   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
   [1m[35mPassenger Load (0.3ms)[0m  SELECT "passengers".* FROM "passengers"
+  [1m[36mDriver Load (1.5ms)[0m  [1mSELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1[0m
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 1]]
+  [1m[36mDriver Load (0.4ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 2]]
+  [1m[36mTrip Load (1.2ms)[0m  [1mSELECT "trips".* FROM "trips"[0m
+  [1m[36m (119.0ms)[0m  [1mDROP DATABASE IF EXISTS "bikeme_development"[0m
+  [1m[35m (120.9ms)[0m  DROP DATABASE IF EXISTS "bikeme_test"
+  [1m[36m (1438.8ms)[0m  [1mCREATE DATABASE "bikeme_development" ENCODING = 'utf8'[0m
+  [1m[35m (417.3ms)[0m  CREATE DATABASE "bikeme_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (38.9ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.3ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (15.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Vada Schamberger DVM"], ["email", "brycen@bartelltreutel.biz"], ["phone_number", "1-886-644-2398"], ["created_at", "2015-04-19 19:06:01.509688"], ["updated_at", "2015-04-19 19:06:01.509688"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Connor Little"], ["email", "kailyn@frami.name"], ["phone_number", "248-160-3042 x739"], ["created_at", "2015-04-19 19:06:01.547259"], ["updated_at", "2015-04-19 19:06:01.547259"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Annamarie Klocko"], ["email", "dillon_monahan@grant.biz"], ["phone_number", "864.375.3083"], ["created_at", "2015-04-19 19:06:01.551458"], ["updated_at", "2015-04-19 19:06:01.551458"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Ashly Leuschke"], ["email", "holly_block@dubuquesteuber.com"], ["phone_number", "1-687-470-9610"], ["created_at", "2015-04-19 19:06:01.554675"], ["updated_at", "2015-04-19 19:06:01.554675"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jamar Kuhic"], ["email", "karine_raynor@torp.com"], ["phone_number", "(185) 891-0653 x3055"], ["created_at", "2015-04-19 19:06:01.557634"], ["updated_at", "2015-04-19 19:06:01.557634"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Mrs. Fae Roob"], ["email", "kiel_stamm@armstrongbaumbach.biz"], ["phone_number", "1-799-219-7302"], ["created_at", "2015-04-19 19:06:01.608269"], ["updated_at", "2015-04-19 19:06:01.608269"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ms. Billy Mertz"], ["email", "dana_christiansen@parkermurphy.net"], ["phone_number", "(738) 916-5369 x6447"], ["created_at", "2015-04-19 19:06:01.612390"], ["updated_at", "2015-04-19 19:06:01.612390"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Jackeline Considine"], ["email", "kariane@lemkegoodwin.info"], ["phone_number", "(621) 099-1902"], ["created_at", "2015-04-19 19:06:01.614968"], ["updated_at", "2015-04-19 19:06:01.614968"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Nicolette Kovacek DDS"], ["email", "bryce@maggiobrakus.net"], ["phone_number", "250.060.6467"], ["created_at", "2015-04-19 19:06:01.617783"], ["updated_at", "2015-04-19 19:06:01.617783"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Keanu Tillman"], ["email", "garrison@prosaccokuphal.info"], ["phone_number", "308.799.8122"], ["created_at", "2015-04-19 19:06:01.620343"], ["updated_at", "2015-04-19 19:06:01.620343"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["origin", "92073 Kuhic Lock"], ["destination", "380 Lockman Viaduct"], ["price", 91], ["created_at", "2015-04-19 19:06:01.710651"], ["updated_at", "2015-04-19 19:06:01.710651"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["origin", "9049 Raphaelle Mount"], ["destination", "27507 Ruecker Junctions"], ["price", 69], ["created_at", "2015-04-19 19:06:01.714679"], ["updated_at", "2015-04-19 19:06:01.714679"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["origin", "996 Mitchell Prairie"], ["destination", "56761 Koch Ports"], ["price", 60], ["created_at", "2015-04-19 19:06:01.717264"], ["updated_at", "2015-04-19 19:06:01.717264"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["origin", "111 Annabelle Skyway"], ["destination", "186 Kiehn Freeway"], ["price", 17], ["created_at", "2015-04-19 19:06:01.719729"], ["updated_at", "2015-04-19 19:06:01.719729"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["origin", "2824 O'Reilly Unions"], ["destination", "27019 Steuber Neck"], ["price", 4], ["created_at", "2015-04-19 19:06:01.722141"], ["updated_at", "2015-04-19 19:06:01.722141"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mDriver Load (0.3ms)[0m  [1mSELECT "drivers".* FROM "drivers"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (15.6ms)[0m  [1mINSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["make", "honda"], ["model", "civic"], ["driver_id", 1], ["created_at", "2015-04-19 19:06:01.819332"], ["updated_at", "2015-04-19 19:06:01.819332"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mTrip Load (0.3ms)[0m  [1mSELECT "trips".* FROM "trips"[0m
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3  [["driver_id", 1], ["updated_at", "2015-04-19 19:06:01.905575"], ["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["make", "honda"], ["model", "accord"], ["driver_id", 2], ["created_at", "2015-04-19 19:06:01.956143"], ["updated_at", "2015-04-19 19:06:01.956143"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1[0m  [["driver_id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["driver_id", 2], ["updated_at", "2015-04-19 19:06:01.960735"], ["id", 2]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["make", "toyota"], ["model", "jcruiser"], ["driver_id", 3], ["created_at", "2015-04-19 19:06:01.964360"], ["updated_at", "2015-04-19 19:06:01.964360"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3  [["driver_id", 3], ["updated_at", "2015-04-19 19:06:01.967563"], ["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["make", "bmw"], ["model", "m5"], ["driver_id", 4], ["created_at", "2015-04-19 19:06:01.970248"], ["updated_at", "2015-04-19 19:06:01.970248"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1[0m  [["driver_id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["driver_id", 4], ["updated_at", "2015-04-19 19:06:01.973047"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["make", "hyundai"], ["model", "sonata"], ["driver_id", 5], ["created_at", "2015-04-19 19:06:01.975942"], ["updated_at", "2015-04-19 19:06:01.975942"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3  [["driver_id", 5], ["updated_at", "2015-04-19 19:06:01.979214"], ["id", 5]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mDriver Load (0.7ms)[0m  [1mSELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1[0m
+  [1m[35mTrip Load (0.3ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 1]]
+  [1m[36mTrip Load (1.3ms)[0m  [1mSELECT "trips".* FROM "trips"[0m
+  [1m[36m (256.2ms)[0m  [1mDROP DATABASE IF EXISTS "bikeme_development"[0m
+  [1m[35m (240.6ms)[0m  DROP DATABASE IF EXISTS "bikeme_test"
+  [1m[36m (1475.8ms)[0m  [1mCREATE DATABASE "bikeme_development" ENCODING = 'utf8'[0m
+  [1m[35m (398.6ms)[0m  CREATE DATABASE "bikeme_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (53.0ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (21.5ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.3ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.1ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (16.0ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jameson Braun"], ["email", "reyes@harrismoriette.biz"], ["phone_number", "1-886-865-5934 x519"], ["created_at", "2015-04-19 19:10:16.091651"], ["updated_at", "2015-04-19 19:10:16.091651"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Sunny Schumm"], ["email", "vincent_walsh@mcdermott.org"], ["phone_number", "820-971-5292 x024"], ["created_at", "2015-04-19 19:10:16.131328"], ["updated_at", "2015-04-19 19:10:16.131328"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ms. Abbey Simonis"], ["email", "haylee@morar.net"], ["phone_number", "634.072.9053"], ["created_at", "2015-04-19 19:10:16.135713"], ["updated_at", "2015-04-19 19:10:16.135713"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Myriam Greenholt"], ["email", "marshall@rueckerlittle.info"], ["phone_number", "205.996.5276"], ["created_at", "2015-04-19 19:10:16.139123"], ["updated_at", "2015-04-19 19:10:16.139123"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Aileen Jast"], ["email", "eda@schoen.net"], ["phone_number", "(317) 019-9479 x1429"], ["created_at", "2015-04-19 19:10:16.142061"], ["updated_at", "2015-04-19 19:10:16.142061"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Miss Tiara Dicki"], ["email", "antonia.hagenes@torp.net"], ["phone_number", "294.186.6510"], ["created_at", "2015-04-19 19:10:16.191112"], ["updated_at", "2015-04-19 19:10:16.191112"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jason Rosenbaum Jr."], ["email", "alverta.johns@schmitt.com"], ["phone_number", "1-347-629-5989"], ["created_at", "2015-04-19 19:10:16.195234"], ["updated_at", "2015-04-19 19:10:16.195234"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Ms. Patrick Gibson"], ["email", "alvera@connelly.net"], ["phone_number", "601.500.2260"], ["created_at", "2015-04-19 19:10:16.198205"], ["updated_at", "2015-04-19 19:10:16.198205"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kailey Mitchell"], ["email", "bettie_heathcote@cole.org"], ["phone_number", "174-242-0388 x488"], ["created_at", "2015-04-19 19:10:16.200760"], ["updated_at", "2015-04-19 19:10:16.200760"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Mylene Rowe Sr."], ["email", "katlyn@metz.org"], ["phone_number", "159-906-4230"], ["created_at", "2015-04-19 19:10:16.203379"], ["updated_at", "2015-04-19 19:10:16.203379"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["origin", "48617 Shanon Freeway"], ["destination", "9411 Bergstrom Spring"], ["price", 73], ["created_at", "2015-04-19 19:10:16.302878"], ["updated_at", "2015-04-19 19:10:16.302878"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["origin", "391 Marietta Ridge"], ["destination", "386 Marlene Shoals"], ["price", 59], ["created_at", "2015-04-19 19:10:16.306780"], ["updated_at", "2015-04-19 19:10:16.306780"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["origin", "6459 Elinore Mills"], ["destination", "249 Johns Ways"], ["price", 40], ["created_at", "2015-04-19 19:10:16.309385"], ["updated_at", "2015-04-19 19:10:16.309385"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["origin", "243 Romaguera Squares"], ["destination", "1764 Palma Lights"], ["price", 32], ["created_at", "2015-04-19 19:10:16.311901"], ["updated_at", "2015-04-19 19:10:16.311901"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "trips" ("origin", "destination", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["origin", "569 Hudson Streets"], ["destination", "8983 Kamren River"], ["price", 39], ["created_at", "2015-04-19 19:10:16.315295"], ["updated_at", "2015-04-19 19:10:16.315295"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mDriver Load (0.3ms)[0m  [1mSELECT "drivers".* FROM "drivers"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (12.7ms)[0m  [1mINSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["make", "honda"], ["model", "civic"], ["driver_id", 1], ["created_at", "2015-04-19 19:10:16.424042"], ["updated_at", "2015-04-19 19:10:16.424042"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mTrip Load (0.4ms)[0m  [1mSELECT "trips".* FROM "trips"[0m
+  [1m[35mTrip Load (0.3ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3  [["driver_id", 1], ["updated_at", "2015-04-19 19:10:16.510359"], ["id", 1]]
+  [1m[36m (16.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["make", "honda"], ["model", "accord"], ["driver_id", 2], ["created_at", "2015-04-19 19:10:16.557896"], ["updated_at", "2015-04-19 19:10:16.557896"]]
+  [1m[35m (15.1ms)[0m  COMMIT
+  [1m[36mTrip Load (0.4ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1[0m  [["driver_id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["driver_id", 2], ["updated_at", "2015-04-19 19:10:16.578316"], ["id", 2]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["make", "toyota"], ["model", "jcruiser"], ["driver_id", 3], ["created_at", "2015-04-19 19:10:16.582758"], ["updated_at", "2015-04-19 19:10:16.582758"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3  [["driver_id", 3], ["updated_at", "2015-04-19 19:10:16.586807"], ["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["make", "bmw"], ["model", "m5"], ["driver_id", 4], ["created_at", "2015-04-19 19:10:16.590243"], ["updated_at", "2015-04-19 19:10:16.590243"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1[0m  [["driver_id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["driver_id", 4], ["updated_at", "2015-04-19 19:10:16.593388"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vehicles" ("make", "model", "driver_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["make", "hyundai"], ["model", "sonata"], ["driver_id", 5], ["created_at", "2015-04-19 19:10:16.596171"], ["updated_at", "2015-04-19 19:10:16.596171"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "trips" SET "driver_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3  [["driver_id", 5], ["updated_at", "2015-04-19 19:10:16.599532"], ["id", 5]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mPassenger Load (0.2ms)[0m  SELECT "passengers".* FROM "passengers"
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."passenger_id" = $1[0m  [["passenger_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "passenger_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["passenger_id", 1], ["updated_at", "2015-04-19 19:10:16.605274"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."passenger_id" = $1[0m  [["passenger_id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "passenger_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["passenger_id", 2], ["updated_at", "2015-04-19 19:10:16.608403"], ["id", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."passenger_id" = $1[0m  [["passenger_id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "passenger_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["passenger_id", 3], ["updated_at", "2015-04-19 19:10:16.611096"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."passenger_id" = $1[0m  [["passenger_id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "passenger_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["passenger_id", 4], ["updated_at", "2015-04-19 19:10:16.613970"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."passenger_id" = $1[0m  [["passenger_id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "passenger_id" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["passenger_id", 5], ["updated_at", "2015-04-19 19:10:16.616638"], ["id", 5]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mDriver Load (0.7ms)[0m  [1mSELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1[0m
+  [1m[35mTrip Load (0.6ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1  [["driver_id", 1]]
+  [1m[36mTrip Load (0.4ms)[0m  [1mSELECT  "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."id" = $2 LIMIT 1[0m  [["driver_id", 1], ["id", 1]]

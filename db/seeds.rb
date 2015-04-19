@@ -21,18 +21,18 @@ end
   Trip.create(origin: Faker::Address.street_address, destination: Faker::Address.street_address, price: Faker::Commerce.price)
 end
 
+trips = Trip.all
 passengers = Passenger.all
 drivers = Driver.all
+
 vehicle_model = ["civic", "accord", "jcruiser", "m5", "sonata"]
 vehicle_make = ["honda", "honda", "toyota", "bmw", "hyundai"]
 
-i = 0
-drivers.each do |driver|
-  driver.vehicles.create(make: vehicle_make[i], model: vehicle_model[i], driver_id: driver.id)
-  driver.trips.create()
-  i += 1
+drivers.each_with_index do |driver, index|
+  driver.vehicles.create(make: vehicle_make[index], model: vehicle_model[index], driver_id: driver.id)
+  driver.trips = [trips[index]]
 end
 
-passengers.each do |passenger|
-  passenger.trips
+passengers.each_with_index do |passenger, index|
+  passenger.trips = [trips[index]]
 end
