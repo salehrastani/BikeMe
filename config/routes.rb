@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'passengers#index'
 
+  get 'passengers/dashboard' => 'passengers#dashboard'
+
   resources :passengers do
   end
 
