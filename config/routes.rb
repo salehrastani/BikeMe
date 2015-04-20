@@ -5,6 +5,15 @@ Rails.application.routes.draw do
   resources :passengers do
   end
 
+  resources :drivers do
+  end
+
+  resources :trips do
+  end
+
+  resources :vehicles do
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,1 +1,22 @@
-<p>hello there</p>
+<h2>Index Page</h2>
+
+<div>
+ <%= form_for @passenger, url: '/passengers/index' do |f| %>
+   <table>
+     <tr>
+       <td><%= f.text_field :name , placeholder: "Name"%></td>
+     </tr>
+     <tr>
+       <td><%= f.text_field :email , placeholder: "Email" %></td>
+     </tr>
+     <tr>
+       <td><%= f.password_field :password , placeholder: "Password" %></td>
+     </tr>
+     <tr>
+       <td><%= f.password_field :password_confirmation , placeholder: "Confirm Password" %></td>
+     </tr>
+    </table>
+    <br>
+   <%= f.submit "Submit", class: "btn btn-default" %>
+ <% end %>
+</div>
