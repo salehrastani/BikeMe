@@ -16,7 +16,6 @@ class PassengersController < ApplicationController
   end
 
   def show
-    @passenger_id = session[:passenger_id]
   end
 
   def edit
