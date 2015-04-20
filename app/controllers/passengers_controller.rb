@@ -9,6 +9,7 @@ class PassengersController < ApplicationController
   end
 
   def create
+    redirect_to :dashboard
   end
 
   def dashboard

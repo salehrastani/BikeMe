@@ -1,7 +1,7 @@
 <h2>Sign In</h2>
 
 <div>
- <%= form_for @passenger, url: '/passengers/dashboard' do |f| %>
+ <%= form_for @passenger, url: '/passengers/dashboard', method: :get do |f| %>
    <table>
      <tr>
        <td><%= f.text_field :email , placeholder: "Email" %></td>
@@ -13,5 +13,5 @@
     <br>
    <%= f.submit "Submit", class: "btn btn-default" %>
  <% end %>
- <button class="btn btn-default" href="passengers/new">Register</button>
+ <a class="btn btn-default" href="passengers/new">Register</a>
 </div>
