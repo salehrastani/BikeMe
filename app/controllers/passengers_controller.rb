@@ -11,9 +11,12 @@ class PassengersController < ApplicationController
   def create
   end
 
-  def show
-    @user_id = session[:user_id]
+  def dashboard
     render :dashboard
+  end
+
+  def show
+    @passenger_id = session[:passenger_id]
   end
 
   def edit
