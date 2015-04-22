@@ -1,17 +1,15 @@
 <h2>Sign In</h2>
 
-<div>
- <%= form_for @passenger, url: '/passengers/dashboard', method: :get do |f| %>
-   <table>
-     <tr>
-       <td><%= f.text_field :email , placeholder: "Email" %></td>
-     </tr>
-     <tr>
-       <td><%= f.password_field :password , placeholder: "Password" %></td>
-     </tr>
-    </table>
-    <br>
-   <%= f.submit "Submit", class: "btn btn-default" %>
- <% end %>
- <a class="btn btn-default" href="passengers/new">Register</a>
+<div >
+  <%= form_for @passenger, url: '/passengers/login', method: :get do |f| %>
+  <div>
+    <%= f.text_field :email , placeholder: "Email" %></td>
+  </div>
+  <div>
+    <%= f.password_field :password , placeholder: "Password" %></td>
+  </div>
+  <br>
+  <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
+  <% end %>
+  <a class="btn btn-default btn-primary" href="passengers/new">Register</a>
 </div>
