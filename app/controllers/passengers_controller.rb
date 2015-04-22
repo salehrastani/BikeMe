@@ -24,6 +24,10 @@ class PassengersController < ApplicationController
     authorize
   end
 
+  def authorize
+    redirect_to '/passengers/new' unless current_passenger
+  end
+
   def logout
     session[:user_id] = nil
     redirect_to 'passengers/login'
