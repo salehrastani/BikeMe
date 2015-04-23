@@ -4,12 +4,14 @@ Rails.application.routes.draw do
 
   resources :passengers do
     get '/dashboard' => 'passengers#dashboard'
-    get '/login' => 'sessions#login'
-    post 'login'   => 'passengers#create'
-    delete 'logout'  => 'passengers#destroy'
+    post '/login'   => 'passengers#create'
+    delete '/logout'  => 'passengers#destroy'
   end
 
   resources :drivers do
+    get '/dashboard' => 'drivers#dashboard'
+    post '/login' => 'drivers#create'
+    delete '/logout' => 'drivers#destroy'
   end
 
   resources :trips do
