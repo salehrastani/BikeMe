@@ -3,17 +3,18 @@ class Driver < ActiveRecord::Base
   has_many :vehicles
 
   has_secure_password
+
   validates_confirmation_of :password, :message => "no-confirmation"
 
-  # include BCrypt
+  include BCrypt
 
-  # def password
-  #   @password ||= Password.new(password_hash)
-  # end
+  def password
+    @password ||= Password.new(password_digest)
+  end
 
-  # def password=(new_password)
-  #   @password = Password.create(new_password)
-  #   self.password_hash = @password
-  # end
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_digest = @password
+  end
 
 end

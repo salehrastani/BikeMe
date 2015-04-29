@@ -3627,3 +3627,280 @@ NoMethodError (undefined method `password_digest=' for #<Passenger:0x007fb86eedf
   Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.9ms)
+
+
+Started GET "/" for ::1 at 2015-04-28 21:10:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (36.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (69.5ms)
+Completed 200 OK in 774ms (Views: 565.4ms | ActiveRecord: 111.8ms)
+  [1m[36mPassenger Load (56.1ms)[0m  [1mSELECT "passengers".* FROM "passengers"[0m
+  [1m[36mPassenger Load (0.7ms)[0m  [1mSELECT "passengers".* FROM "passengers"[0m
+  [1m[36m (23.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePassengers (20150418035329)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.4ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150418035329"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDrivers (20150418035333)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (16.4ms)[0m  [1mCREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (37.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150418035333"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTrips (20150418035342)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150418035342"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateVehicles (20150418035435)
+  [1m[35m (15.6ms)[0m  BEGIN
+  [1m[36m (19.6ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150418035435"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'drivers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'passengers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'trips'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'vehicles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Liliane Beier"], ["email", "keegan_lemke@corkery.org"], ["phone_number", "(887) 828-8846 x86824"], ["created_at", "2015-04-29 04:25:49.854797"], ["updated_at", "2015-04-29 04:25:49.854797"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Angela Schuppe IV"], ["email", "erik_kuvalis@hintzbalistreri.biz"], ["phone_number", "288.696.6856"], ["created_at", "2015-04-29 04:25:49.864695"], ["updated_at", "2015-04-29 04:25:49.864695"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Nicolas Swaniawski"], ["email", "lonny@zboncak.com"], ["phone_number", "(738) 808-7644 x3487"], ["created_at", "2015-04-29 04:25:49.869011"], ["updated_at", "2015-04-29 04:25:49.869011"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Cale Reichel DDS"], ["email", "keira.tromp@lebsackfritsch.biz"], ["phone_number", "731-319-0970 x26466"], ["created_at", "2015-04-29 04:25:49.872267"], ["updated_at", "2015-04-29 04:25:49.872267"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Easton Crist"], ["email", "kay.morar@ziemekunze.org"], ["phone_number", "991-494-7356"], ["created_at", "2015-04-29 04:25:49.875493"], ["updated_at", "2015-04-29 04:25:49.875493"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Talia Bailey"], ["email", "orlando.okuneva@runolfsdottir.net"], ["phone_number", "300-861-6225 x693"], ["created_at", "2015-04-29 04:30:20.511675"], ["updated_at", "2015-04-29 04:30:20.511675"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Camryn Legros"], ["email", "destin@browndaugherty.info"], ["phone_number", "323.168.7386 x9799"], ["created_at", "2015-04-29 04:30:20.519555"], ["updated_at", "2015-04-29 04:30:20.519555"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ms. Hazle Krajcik"], ["email", "amara@sauerlabadie.net"], ["phone_number", "1-105-000-8367 x4210"], ["created_at", "2015-04-29 04:30:20.523514"], ["updated_at", "2015-04-29 04:30:20.523514"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Stacy Crooks PhD"], ["email", "addie_cruickshank@wolfwalker.biz"], ["phone_number", "842.105.0933 x12026"], ["created_at", "2015-04-29 04:30:20.526538"], ["updated_at", "2015-04-29 04:30:20.526538"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Korey Crooks"], ["email", "shanon_effertz@rice.info"], ["phone_number", "(883) 877-4080"], ["created_at", "2015-04-29 04:30:20.529317"], ["updated_at", "2015-04-29 04:30:20.529317"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (223.5ms)[0m  [1mDROP DATABASE IF EXISTS "bikeme_development"[0m
+  [1m[35m (118.8ms)[0m  DROP DATABASE IF EXISTS "bikeme_test"
+  [1m[36m (342.2ms)[0m  [1mCREATE DATABASE "bikeme_development" ENCODING = 'utf8'[0m
+  [1m[35m (356.5ms)[0m  CREATE DATABASE "bikeme_test" ENCODING = 'utf8'
+  [1m[36mSQL (20.1ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.3ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.7ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brendon Muller"], ["email", "nina@littlewolff.info"], ["phone_number", "(870) 073-6991 x0157"], ["created_at", "2015-04-29 04:30:35.136683"], ["updated_at", "2015-04-29 04:30:35.136683"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Gennaro Collier II"], ["email", "ibrahim_hoppe@mohr.com"], ["phone_number", "546-582-2563"], ["created_at", "2015-04-29 04:30:35.145645"], ["updated_at", "2015-04-29 04:30:35.145645"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gertrude Oberbrunner III"], ["email", "pat.hudson@ledner.biz"], ["phone_number", "358.969.9077 x990"], ["created_at", "2015-04-29 04:30:35.148722"], ["updated_at", "2015-04-29 04:30:35.148722"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Jammie Jakubowski"], ["email", "hettie@oberbrunnerpredovic.com"], ["phone_number", "773-212-2429 x73878"], ["created_at", "2015-04-29 04:30:35.151541"], ["updated_at", "2015-04-29 04:30:35.151541"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Neil Barrows"], ["email", "camille@erdman.biz"], ["phone_number", "1-332-469-4738 x15703"], ["created_at", "2015-04-29 04:30:35.154618"], ["updated_at", "2015-04-29 04:30:35.154618"]]
+  [1m[35m (20.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (121.3ms)[0m  [1mDROP DATABASE IF EXISTS "bikeme_development"[0m
+  [1m[35m (121.0ms)[0m  DROP DATABASE IF EXISTS "bikeme_test"
+  [1m[36m (409.3ms)[0m  [1mCREATE DATABASE "bikeme_development" ENCODING = 'utf8'[0m
+  [1m[35m (326.4ms)[0m  CREATE DATABASE "bikeme_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.6ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jerrold McLaughlin"], ["email", "yadira@ferry.info"], ["phone_number", "(350) 059-7067"], ["created_at", "2015-04-29 04:30:54.990119"], ["updated_at", "2015-04-29 04:30:54.990119"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Devonte Bernier"], ["email", "gerda.hettinger@oberbrunnerhamill.info"], ["phone_number", "797.534.8226 x75403"], ["created_at", "2015-04-29 04:30:54.998448"], ["updated_at", "2015-04-29 04:30:54.998448"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Anahi Prohaska"], ["email", "destinee@ferryondricka.biz"], ["phone_number", "472-789-0706"], ["created_at", "2015-04-29 04:30:55.002172"], ["updated_at", "2015-04-29 04:30:55.002172"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Stephanie Ankunding"], ["email", "amparo.hintz@leuschkekilback.name"], ["phone_number", "245.941.2546 x0589"], ["created_at", "2015-04-29 04:30:55.005234"], ["updated_at", "2015-04-29 04:30:55.005234"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Verla Schimmel"], ["email", "raphael.nicolas@morar.com"], ["phone_number", "761-854-9115 x7517"], ["created_at", "2015-04-29 04:30:55.008243"], ["updated_at", "2015-04-29 04:30:55.008243"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (123.7ms)[0m  [1mDROP DATABASE IF EXISTS "bikeme_development"[0m
+  [1m[35m (120.4ms)[0m  DROP DATABASE IF EXISTS "bikeme_test"
+  [1m[36m (566.9ms)[0m  [1mCREATE DATABASE "bikeme_development" ENCODING = 'utf8'[0m
+  [1m[35m (539.3ms)[0m  CREATE DATABASE "bikeme_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.1ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (236.0ms)[0m  [1mDROP DATABASE IF EXISTS "bikeme_development"[0m
+  [1m[35m (121.1ms)[0m  DROP DATABASE IF EXISTS "bikeme_test"
+  [1m[36m (288.9ms)[0m  [1mCREATE DATABASE "bikeme_development" ENCODING = 'utf8'[0m
+  [1m[35m (288.3ms)[0m  CREATE DATABASE "bikeme_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.6ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "drivers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (5.8ms)[0m  [1mCREATE TABLE "passengers" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "phone_number" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "trips" ("id" serial primary key, "origin" character varying, "destination" character varying, "duration" character varying, "price" integer, "driver_id" integer, "passenger_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "driver_id" integer, "make" character varying, "model" character varying, "year" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.4ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035435')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035329')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150418035333')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150418035342')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
