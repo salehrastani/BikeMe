@@ -30,7 +30,7 @@ class DriversController < ApplicationController
       render :dashboard
     else
     # If user's login doesn't work, send them back to the login form.
-      redirect_to '/login', :notice => "Invalid login. Try again"
+      redirect_to '/drivers/new', :notice => "Invalid login. Try again"
     end
   end
 
