@@ -1,3 +1,3 @@
 <p>were in this persons dashboard:</p><span><%=@passenger%></span>
 <br>
-<a class="btn btn-primary" data-method="delete" href="/passengers/logout" >Sign out as passenger</a>
+<a class="btn btn-primary" data-method="delete" href="/passengers/<%=session[:passenger_id]%>/logout" >Sign out as passenger</a>

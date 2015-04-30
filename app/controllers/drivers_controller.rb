@@ -39,7 +39,7 @@ class DriversController < ApplicationController
   end
 
   def logout
-    session[:user_id] = nil
+    session[:driver_id] = nil
     redirect_to 'drivers/login'
   end
 

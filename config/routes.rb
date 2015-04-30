@@ -5,16 +5,16 @@ Rails.application.routes.draw do
 
   resources :passengers do
     get '/dashboard' => 'passengers#dashboard'
+    delete '/logout'  => 'passengers#logout'
   end
   post '/passengers/login'   => 'passengers#login'
-  delete '/passengers/logout'  => 'passengers#logout'
 
 
   resources :drivers do
     get '/dashboard' => 'drivers#dashboard'
+    delete '/logout' => 'drivers#logout'
   end
   post '/drivers/login' => 'drivers#login'
-  delete '/drivers/logout' => 'drivers#logout'
 
 
   resources :trips do
