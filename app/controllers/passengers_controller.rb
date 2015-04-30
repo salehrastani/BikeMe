@@ -53,8 +53,10 @@ class PassengersController < ApplicationController
   end
 
   def logout
-    session[:passenger_id] = nil
-    redirect_to 'passengers/login'
+    p "-------------------------------------------------------------------------"
+    p "in logout action"
+    session[:passenger_id].clear
+    redirect_to '/'
   end
 
   def dashboard
@@ -69,6 +71,8 @@ class PassengersController < ApplicationController
 
   # to destroy user
   def destroy
+    p "-------------------------------------------------------------------------"
+    p "in destroy action"
   end
 
 

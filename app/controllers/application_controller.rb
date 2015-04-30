@@ -4,9 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-  def current_passenger
-    @current_passenger ||= User.find(session[:passenger_id]) if session[:passenger_id]
-  end
+  # def current_passenger
+  #   @current_passenger ||= User.find(session[:passenger_id]) if session[:passenger_id]
+  # end
 
 
 end
