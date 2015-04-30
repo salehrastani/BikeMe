@@ -1,5 +1,5 @@
 
-<h2>Register</h2>
+<h2>Register As Passenger</h2>
 
 <div class="col 8">
   <%= form_for @passenger, url: '/passengers', method: :post do |f| %>
@@ -18,7 +18,7 @@
       </tr>
     </table>
     <br>
-    <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
+    <%= f.submit "Register as passenger", class: "btn btn-default btn-primary" %>
   <% end %>
-  <a class="btn btn-primary" href="/">Sign In</a>
+  <a class="btn btn-primary" href="/">Sign in as passenger</a>
 </div>
