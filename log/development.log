@@ -13080,3 +13080,307 @@ NoMethodError (undefined method `clear' for 3:Fixnum):
   Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 14:09:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (17.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (189.6ms)
+Completed 200 OK in 3147ms (Views: 3019.1ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/assets/styling.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-02 14:09:34 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-02 14:09:34 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-02 14:09:34 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-02 14:09:34 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-02 14:09:34 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-02 14:09:34 -0700
+
+
+Started POST "/passengers/login" for ::1 at 2015-05-02 14:09:40 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u9+lTTz/gxyW0CeIUBW7BOFt7/xOj5ub0/OkM8DHAzxOFnZZ409O4yweVpfEWvG0l0AYhQwPww/b+TgjpnDf1g==", "passenger"=>{"email"=>"a", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+  [1m[35mPassenger Load (1.7ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "a"]]
+  Rendered passengers/dashboard.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 512ms (Views: 108.7ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/passengers/3/logout" for ::1 at 2015-05-02 14:09:43 -0700
+Processing by PassengersController#logout as HTML
+  Parameters: {"authenticity_token"=>"ayNsJmNFX9Sqp4BS4Pev3P6DKlEnVYhj85VbPUSeA7ie6r8yvPWSKxBp8U10uOVsiK7dKGXV0Pf7n8ctIinfUg==", "passenger_id"=>"3"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 14:09:43 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 245ms (Views: 242.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/new" for ::1 at 2015-05-02 14:09:45 -0700
+Processing by PassengersController#new as HTML
+  Rendered passengers/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 107ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/passengers" for ::1 at 2015-05-02 14:09:50 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zWCes98yECljBJknLgWQkE1BecOId1Rni8h+pRsfh/44qU2nAILd1tnK6Di6StogO2yOusr3DPODwuK1fahbFA==", "passenger"=>{"name"=>"w", "email"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register as passenger"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (37.2ms)[0m  INSERT INTO "passengers" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "w"], ["email", "w"], ["password_digest", "$2a$10$cDfSwOUX7OVgGiDm/Ff7YuDNP0ctbywx.Cj2imNhR1hCmmRpC4tVi"], ["created_at", "2015-05-02 21:09:51.105489"], ["updated_at", "2015-05-02 21:09:51.105489"]]
+  [1m[36m (54.6ms)[0m  [1mCOMMIT[0m
+  Rendered passengers/dashboard.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 491ms (Views: 80.9ms | ActiveRecord: 92.2ms)
+
+
+Started DELETE "/passengers/4/logout" for ::1 at 2015-05-02 14:09:55 -0700
+Processing by PassengersController#logout as HTML
+  Parameters: {"authenticity_token"=>"KD/JGGtHxdq0ocuJz3nmDyrFWpWLCOqjmq0TXrm66BDd9hoMtPcIJQ5vupZbNqy/XOit7MmIsjeSp49O3w00+g==", "passenger_id"=>"4"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 14:09:55 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-05-02 14:12:10 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WDO51k6y6ehQPGe3W5vnCVpTR3uTvYtS1m+6FpJX4BOt+mrCkQIkF+ryFqjP1K25LH6wAtE908beZSYG9OA8+Q==", "passenger"=>{"email"=>"a", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+  [1m[35mPassenger Load (1.0ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "a"]]
+  Rendered passengers/dashboard.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 386ms (Views: 81.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/passengers/3/logout" for ::1 at 2015-05-02 14:12:17 -0700
+Processing by PassengersController#logout as HTML
+  Parameters: {"authenticity_token"=>"GXXIs8GaD+NejSvLGBFum36M0G/tNXhSOSyXLmz9vhvsvBunHirCHORDWtSMXiQrCKEnFq+1IMYxJgs+Ckpi8Q==", "passenger_id"=>"3"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 14:12:17 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 85ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/new" for ::1 at 2015-05-02 14:12:21 -0700
+Processing by PassengersController#new as HTML
+  Rendered passengers/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 14:12:28 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 88ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drivers" for ::1 at 2015-05-02 14:12:32 -0700
+Processing by DriversController#index as HTML
+  Rendered drivers/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 131ms (Views: 89.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/drivers/new" for ::1 at 2015-05-02 14:12:35 -0700
+Processing by DriversController#new as HTML
+  Rendered drivers/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 97ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 14:13:30 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 86ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styling.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-02 14:13:30 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-02 14:13:30 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-02 14:13:30 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-02 14:13:30 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-02 14:13:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-02 14:13:30 -0700
+
+
+Started POST "/passengers/login" for ::1 at 2015-05-02 14:13:35 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0UwN3XfrWQixFxAGAdYaGeb4z9KQykb46XfjyleM7z8khd7JqFuU9wvZYRmVmVCpkNU4q9JKHmzhfX/aMTsz1Q==", "passenger"=>{"email"=>"a", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+  [1m[36mPassenger Load (1.0ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "a"]]
+  Rendered passengers/dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 380ms (Views: 73.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-05-02 14:17:52 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0UwN3XfrWQixFxAGAdYaGeb4z9KQykb46XfjyleM7z8khd7JqFuU9wvZYRmVmVCpkNU4q9JKHmzhfX/aMTsz1Q==", "passenger"=>{"email"=>"a", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+  [1m[35mPassenger Load (0.9ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "a"]]
+  Rendered passengers/dashboard.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 393ms (Views: 86.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/styling.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-02 14:17:53 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-02 14:17:53 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-02 14:17:53 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-02 14:17:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-02 14:17:53 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-02 14:17:53 -0700
+
+
+Started POST "/passengers/login" for ::1 at 2015-05-02 14:18:05 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0UwN3XfrWQixFxAGAdYaGeb4z9KQykb46XfjyleM7z8khd7JqFuU9wvZYRmVmVCpkNU4q9JKHmzhfX/aMTsz1Q==", "passenger"=>{"email"=>"a", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+  [1m[36mPassenger Load (0.8ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "a"]]
+  Rendered passengers/dashboard.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 386ms (Views: 77.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-02 14:18:05 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-02 14:18:05 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-02 14:18:05 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-02 14:18:05 -0700
+
+
+Started GET "/assets/styling.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-02 14:18:05 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-02 14:18:05 -0700
+
+
+Started POST "/passengers/login" for ::1 at 2015-05-02 14:18:14 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0UwN3XfrWQixFxAGAdYaGeb4z9KQykb46XfjyleM7z8khd7JqFuU9wvZYRmVmVCpkNU4q9JKHmzhfX/aMTsz1Q==", "passenger"=>{"email"=>"a", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+  [1m[35mPassenger Load (1.0ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "a"]]
+  Rendered passengers/dashboard.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 387ms (Views: 77.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/styling.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-02 14:18:14 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-02 14:18:14 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-02 14:18:14 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-02 14:18:14 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-02 14:18:14 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-02 14:18:14 -0700
+
+
+Started GET "/passengers/new" for ::1 at 2015-05-02 14:21:06 -0700
+Processing by PassengersController#new as HTML
+  Rendered passengers/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 82ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/passengers" for ::1 at 2015-05-02 14:21:12 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vc+JH5n0KUFge0x95LmmzXNW5DuTgrWf2RQMf32tlR9IBloLRkTkvtq1PWJw9ux9BXsTQtEC7QvRHpBvGxpJ9Q==", "passenger"=>{"name"=>"r", "email"=>"r", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register as passenger"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "passengers" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "r"], ["email", "r"], ["password_digest", "$2a$10$9jTz4k8lSWWdi5yo/mFS8eR8TVTI4DXR2wccDkf138GgUaecTvkTy"], ["created_at", "2015-05-02 21:21:12.859948"], ["updated_at", "2015-05-02 21:21:12.859948"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  Rendered passengers/dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 388ms (Views: 75.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 14:30:29 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 128ms (Views: 90.3ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-05-02 14:30:35 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZWpDNZaqvKXRA7WTLBsr0narkZQFWmdVg7KkgOQz6tSQo5AhSRpxWmvNxIy4VGFiAIZm7UfaP8GLuDiQgoQ2Pg==", "passenger"=>{"email"=>"r", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+  [1m[35mPassenger Load (0.7ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "r"]]
+Redirected to http://localhost:3000/passengers/5/dashboard
+Completed 302 Found in 309ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/passengers/5/dashboard" for ::1 at 2015-05-02 14:30:36 -0700
+Processing by PassengersController#dashboard as HTML
+  Parameters: {"passenger_id"=>"5"}
+  Rendered passengers/dashboard.html.erb within layouts/application (41.9ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p>were in this persons dashboard:</p><span>NAME: <%=@passenger.name%></span>
+    2: <br>
+    3: <a class="btn btn-primary" data-method="delete" href="/passengers/<%=session[:passenger_id]%>/logout" >Sign out as passenger</a>
+  app/views/passengers/dashboard.html.erb:1:in `_app_views_passengers_dashboard_html_erb__4328562263627108666_70288576736820'
+  app/controllers/passengers_controller.rb:61:in `dashboard'
+
+
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (30.0ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.5ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (106.0ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (86.3ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (254.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-05-02 14:55:13 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k+ORJTf6mFJ+9CVBTldqmwkPAIFetWmEJzI593CeM8VmKkIx6EpVrcQ6VF7aGCArfyL3+Bw1MRAvOKXnFinvLw==", "passenger"=>{"email"=>"r", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+  [1m[36mPassenger Load (0.5ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "r"]]
+Redirected to http://localhost:3000/passengers/5/dashboard
+Completed 302 Found in 361ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/passengers/5/dashboard" for ::1 at 2015-05-02 14:55:14 -0700
+Processing by PassengersController#dashboard as HTML
+  Parameters: {"passenger_id"=>"5"}
+  [1m[35mPassenger Load (1.0ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered passengers/dashboard.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 140ms (Views: 132.3ms | ActiveRecord: 1.0ms)

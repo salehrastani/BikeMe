@@ -14,7 +14,7 @@ class PassengersController < ApplicationController
     @passenger = Passenger.new(passenger_params)
     if @passenger.save
       session[:passenger_id] = @passenger.id
-      render :dashboard
+      redirect_to passenger_dashboard_path(@passenger.id)
     else
       redirect_to 'passenger/new', :notice => "ewww, please try again"
     end
@@ -27,7 +27,7 @@ class PassengersController < ApplicationController
       # Save the user id inside the browser cookie. This is how we keep the user
       # logged in when they navigate around our website.
       session[:passenger_id] = @passenger.id
-      render :dashboard
+      redirect_to passenger_dashboard_path(@passenger.id)
     else
     # If user's login doesn't work, send them back to the login form.
       redirect_to '/passengers/new', :notice => "Invalid login. Try again"
@@ -58,7 +58,8 @@ class PassengersController < ApplicationController
   end
 
   def dashboard
-    render "/passengers/#{@passenger.id}/dashboard"
+    @passenger = Passenger.find(session[:passenger_id])
+    render :dashboard
   end
 
   def show
