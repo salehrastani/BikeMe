@@ -13384,3 +13384,41 @@ Processing by PassengersController#dashboard as HTML
   [1m[35mPassenger Load (1.0ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."id" = $1 LIMIT 1  [["id", 5]]
   Rendered passengers/dashboard.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 140ms (Views: 132.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/passengers/5/logout" for ::1 at 2015-05-02 15:38:33 -0700
+Processing by PassengersController#logout as HTML
+  Parameters: {"authenticity_token"=>"GnXBYo8i/y6SEH8VBdBTL5MOcFHNtPS79uplY4ts+KPvvBJ2UJIy0SjeDgqRnxmf5SOHKI80rC/+4Plz7dskSQ==", "passenger_id"=>"5"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-02 15:38:33 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 94ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/new" for ::1 at 2015-05-02 15:38:36 -0700
+Processing by PassengersController#new as HTML
+  Rendered passengers/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/passengers" for ::1 at 2015-05-02 15:38:43 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WSUpO3ftF+ZxZBm3JSOce0uwZNtwxe6Cm9QA50GjxM+s7PovqF3aGcuqaKixbNbLPZ2TojJFthaT3pz3JxQYJQ==", "passenger"=>{"name"=>"e", "email"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register as passenger"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "passengers" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "e"], ["email", "e"], ["password_digest", "$2a$10$qnlJG/pfvMnijsK64HTFM.H2Dh.aBQXn8pePzUr4k8RBKEO0QN8CS"], ["created_at", "2015-05-02 22:38:43.713677"], ["updated_at", "2015-05-02 22:38:43.713677"]]
+  [1m[36m (28.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/passengers/6/dashboard
+Completed 302 Found in 122ms (ActiveRecord: 29.6ms)
+
+
+Started GET "/passengers/6/dashboard" for ::1 at 2015-05-02 15:38:43 -0700
+Processing by PassengersController#dashboard as HTML
+  Parameters: {"passenger_id"=>"6"}
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered passengers/dashboard.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+  [1m[36mPassenger Load (0.7ms)[0m  [1mSELECT "passengers".* FROM "passengers"[0m
