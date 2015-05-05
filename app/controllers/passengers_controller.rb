@@ -11,7 +11,7 @@ class PassengersController < ApplicationController
   end
 
   def create
-    passenger = Passenger.create(passenger_params)
+    passenger = Passenger.new(passenger_params)
     if passenger.save
       session[:passenger_id] = passenger.id
       redirect_to passenger_dashboard_path(passenger.id)
