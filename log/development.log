@@ -13771,3 +13771,137 @@ Started GET "/" for 127.0.0.1 at 2015-05-05 14:18:23 -0700
 Processing by PassengersController#index as HTML
   Rendered passengers/index.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 14:38:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#index as HTML
+Completed 500 Internal Server Error in 34ms
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007f98aee58550>):
+  app/models/passenger.rb:10:in `<class:Passenger>'
+  app/models/passenger.rb:1:in `<top (required)>'
+  app/controllers/passengers_controller.rb:4:in `index'
+
+
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (38.9ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.9ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (67.0ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (184.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 14:40:07 -0700
+Processing by PassengersController#index as HTML
+Completed 500 Internal Server Error in 25ms
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007f98aee0be30>):
+  app/models/passenger.rb:8:in `<class:Passenger>'
+  app/models/passenger.rb:1:in `<top (required)>'
+  app/controllers/passengers_controller.rb:4:in `index'
+
+
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (107.3ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/hamed/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (220.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 14:40:18 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 766ms (Views: 708.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/styling.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 14:40:19 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-05 14:40:19 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-05 14:40:20 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-05 14:40:20 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-05 14:40:20 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-05 14:40:20 -0700
+
+
+Started GET "/" for ::1 at 2015-05-05 14:40:21 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styling.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 14:40:21 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-05 14:40:21 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-05-05 14:40:21 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-05 14:40:21 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-05 14:40:21 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-05 14:40:21 -0700
+
+
+Started GET "/passengers/new" for ::1 at 2015-05-05 14:40:23 -0700
+Processing by PassengersController#new as HTML
+  Rendered passengers/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/passengers" for ::1 at 2015-05-05 14:40:30 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R12UHP3RuBZ5oKyAt7G6F7b/GbbScYUcGMOMMqOnqUCylEcIImF16cNu3Z8j/vCnwNLuz5Dx3YgQyRAixRB1qg==", "passenger"=>{"name"=>"j", "email"=>"j", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register as passenger"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "j"], ["email", "j"], ["password_digest", "$2a$10$MZt7g0eGQiZBBmrtBlS.3.IHzEvOIMs1T1N7laozOQheRHtXtDx3a"], ["created_at", "2015-05-05 21:40:30.626701"], ["updated_at", "2015-05-05 21:40:30.626701"]]
+  [1m[35m (15.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/passengers/10/dashboard
+Completed 302 Found in 335ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/passengers/10/dashboard" for ::1 at 2015-05-05 14:40:30 -0700
+Processing by PassengersController#dashboard as HTML
+  Parameters: {"passenger_id"=>"10"}
+  [1m[36mPassenger Load (0.3ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered passengers/dashboard.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 133ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/passengers/10/logout" for ::1 at 2015-05-05 14:40:34 -0700
+Processing by PassengersController#logout as HTML
+  Parameters: {"authenticity_token"=>"KuMT2zJ37iCrvwnc2OwITKYdx/h6uuahk1eG8ntGnWjfKsDP7ccj3xFxeMNMo0L80DAwgTg6vjWbXRriHfFBgg==", "passenger_id"=>"10"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 14:40:34 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
