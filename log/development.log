@@ -14027,3 +14027,4 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+  [1m[36mPassenger Load (0.7ms)[0m  [1mSELECT "passengers".* FROM "passengers"[0m
