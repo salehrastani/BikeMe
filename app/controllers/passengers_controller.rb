@@ -1,8 +1,9 @@
 class PassengersController < ApplicationController
 
   def index
-    @passenger = Passenger.new
-    render :index
+    @passenger = Passenger.first
+    # render :index
+    render json: @passenger
   end
 
   def new
