@@ -22,15 +22,11 @@ class DriversController < ApplicationController
 
   def login
     driver = Driver.find_by_email(params[:passenger][:email])
-    # If the user exists AND the password entered is correct.
     if driver && driver.authenticate(params[:driver][:password])
-      # Save the user id inside the browser cookie. This is how we keep the user
-      # logged in when they navigate around our website.
       session[:driver_id] = driver.id
       redirect_to driver_dashboard_path(driver.id)
 
     else
-    # If user's login doesn't work, send them back to the login form.
       redirect_to '/drivers/new', :notice => "Invalid login. Try again"
     end
   end
