@@ -15598,3 +15598,104 @@ Started GET "/passengers/new" for ::1 at 2015-07-15 11:12:05 -0700
 Processing by PassengersController#new as HTML
   Rendered passengers/new.html.erb (0.7ms)
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-15 11:27:29 -0700
+
+SyntaxError (/Users/apprentice/Coding/BikeMe-api/app/controllers/passengers_controller.rb:30: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('):
+  app/controllers/passengers_controller.rb:30: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (20.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (42.7ms)
+
+
+Started GET "/" for ::1 at 2015-07-15 11:27:53 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb (1.2ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-15 11:27:56 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c1YD2ML6MdgrFDjupsBnDQuEAHLASEaNTE1JfjeqO/iU69kJy3WLcZzlm9kDDX3M6LDZLzvSlc5xfJjSZbVbqQ==", "passenger"=>{"email"=>"w", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.6ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "w"]]
+Completed 200 OK in 67ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-07-15 11:29:13 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb (0.6ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-15 11:32:36 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2V1G11CXUbReqxst5nDTekxDmPMhIi26/1ckwzlPJi61/cY1KgGTpYGHklTw3P3Ypkmdn4GFd1M8TxBcXBccTg==", "passenger"=>{"email"=>"w", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.3ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "w"]]
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/passengers/new" for ::1 at 2015-07-15 11:32:46 -0700
+Processing by PassengersController#new as HTML
+  Rendered passengers/new.html.erb (1.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-15 11:32:57 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YT5f7kVtp9GHo3auZC+cAgWXS4KmNyNgflEBL6OYCZ0TiO0VHVhZ8R9YdJReLUYLTg+rhdW2+4EHqPouzlV//Q==", "passenger"=>{"name"=>"h", "email"=>"h", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register as passenger"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "e55e7e02-1b85-44ad-b85f-c30073dd17dd"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "h"], ["email", "h"], ["password_digest", "$2a$10$Ntehpw3djY.lfJKuD61Zde.d1LIFWgASA2CU4IRFoOh6FcF1gwBwa"], ["token", "e55e7e02-1b85-44ad-b85f-c30073dd17dd"], ["created_at", "2015-07-15 18:32:58.022878"], ["updated_at", "2015-07-15 18:32:58.022878"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-07-15 11:41:01 -0700
+
+SyntaxError (/Users/apprentice/Coding/BikeMe-api/app/controllers/passengers_controller.rb:18: syntax error, unexpected ',', expecting keyword_end
+      end, status: 200
+          ^):
+  app/controllers/passengers_controller.rb:18: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-15 11:41:22 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb (1.2ms)
+Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-15 11:41:25 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tax9uPZ78mSY1G/v7hkDGb5CyEX2rH5qCFqQWs6bnr6bgpzhztrJ9nGPihTqnyJ9P18LHFgRhJ4K2ar3pvm3xA==", "passenger"=>{"email"=>"h", "password"=>"[FILTERED]"}, "commit"=>"Sign in as passenger"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.6ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "h"]]
+Completed 200 OK in 70ms (Views: 0.5ms | ActiveRecord: 0.6ms)

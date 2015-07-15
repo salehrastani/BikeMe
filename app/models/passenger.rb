@@ -9,7 +9,10 @@ class Passenger < ActiveRecord::Base
     self.token = generate_token
   end
 
-
+  def to_json(options={})
+    options[:except] ||= [:password_digest, :token]
+    super(options)
+  end
 
   private
     def generate_token

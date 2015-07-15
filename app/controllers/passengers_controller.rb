@@ -22,10 +22,12 @@ class PassengersController < ApplicationController
   def login
     passenger = Passenger.find_by_email(params[:passenger][:email])
     if passenger && passenger.authenticate(params[:passenger][:password])
-      session[:passenger_id] = passenger.id
-      redirect_to passenger_dashboard_path(passenger.id)
+      # session[:passenger_id] = passenger.id
+      # redirect_to passenger_dashboard_path(passenger.id)
+      render json: passenger, status: 200
     else
-      redirect_to '/passengers/new', :notice => "Invalid login. Try again"
+      # redirect_to '/passengers/new', :notice => "Invalid login. Try again"
+      render nothing: true, status: 401
     end
   end
 
