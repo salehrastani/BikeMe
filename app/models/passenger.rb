@@ -4,13 +4,14 @@ class Passenger < ActiveRecord::Base
   has_secure_password
   validates_confirmation_of :password, :message => "no-confirmation"
   after_validation :ensure_token
+  # skip_before_filter  :verify_authenticity_token
 
   def ensure_token
     self.token = generate_token
   end
 
   def to_json(options={})
-    options[:except] ||= [:password_digest, :token]
+    options[:except] ||= [:password_digest]
     super(options)
   end
 

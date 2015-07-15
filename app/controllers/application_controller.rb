@@ -1,26 +1,25 @@
 class ApplicationController < ActionController::API
 
   include ActionController::RequestForgeryProtection
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  before_filter :cors_set_access_control_headers
-
-  def cors_set_access_control_headers
-    headers['Access-Control-Allow-Origin'] = '*'
-    headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'
-    headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization, Token'
-    headers['Access-Control-Max-Age'] = "1728000"
-  end
-
 
   protect_from_forgery with: :null_session
 
+  private
 
-  # def current_passenger
-  #   @current_passenger ||= User.find(session[:passenger_id]) if session[:passenger_id]
-  # end
+    def current_passenger
+      @current_passenger ||= Passenger.find_by(email: request.headers["email"])
+    end
+    helper_method :current_passenger
 
-
+    def signed_in?
+     @passenger = Passenger.find_by(email: request.headers["email"])
+     if @passenger && @passenger.token = request.headers["token"]
+       true
+     else
+       render nothing: true, status: 401
+     end
+    end
+    helper_method :signed_in?
 
 
 end

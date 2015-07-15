@@ -1,4 +1,5 @@
 class PassengersController < ApplicationController
+  before_action :signed_in?, only: [:dashboard, :update, :logout, :destroy]
 
   def index
     @passenger = Passenger.new
@@ -10,21 +11,29 @@ class PassengersController < ApplicationController
     render :new
   end
 
+  def show
+  end
+
   def create
-    passenger = Passenger.new(passenger_params)
-    if passenger.save
-      render json: passenger, status: 200
+    p "were in create before params -------------------------------"
+    @passenger = Passenger.new(passenger_params)
+    p "-----------------------------------------------"
+    p "were in!!!!!!!!!!"
+    if @passenger.save
+      p "---------------------------------------------"
+      p "were saved!!!!"
+      render json: @passenger, status: 200
     else
       render nothing: true, status: 401
     end
   end
 
   def login
-    passenger = Passenger.find_by_email(params[:passenger][:email])
-    if passenger && passenger.authenticate(params[:passenger][:password])
+    @passenger = Passenger.find_by_email(params[:passenger][:email])
+    if @passenger && @passenger.authenticate(params[:passenger][:password])
       # session[:passenger_id] = passenger.id
       # redirect_to passenger_dashboard_path(passenger.id)
-      render json: passenger, status: 200
+      render json: @passenger, status: 200
     else
       # redirect_to '/passengers/new', :notice => "Invalid login. Try again"
       render nothing: true, status: 401
@@ -45,11 +54,10 @@ class PassengersController < ApplicationController
     render :dashboard
   end
 
-  def show
-
-  end
 
   def update
+    current_passenger.update(passenger_params)
+    render json: current_passenger
   end
 
   # to destroy user
@@ -60,7 +68,7 @@ class PassengersController < ApplicationController
 
   private
   def passenger_params
-    params.require(:passenger).permit(:name, :email, :password, :password_confirmation)
+    params.permit(:name, :email, :password, :password_confirmation)
   end
 
 end
