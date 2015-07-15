@@ -50,7 +50,7 @@ class PassengersController < ApplicationController
   end
 
   def dashboard
-    @passenger = Passenger.find(params[:passenger_id])
+    @passenger =Passenger.find(params[:passenger_id])
     render :dashboard
   end
 
