@@ -16955,3 +16955,126 @@ Can't verify CSRF token authenticity
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "l"], ["password_digest", "$2a$10$T6bCVSPRoDJZ9aN8gdgZqOCIJDYPMh0e23r0uz4/DlspfF4UDOFRy"], ["token", "b9d119ae-5181-4e4c-9605-a7316311f921"], ["created_at", "2015-07-15 22:42:46.912725"], ["updated_at", "2015-07-15 22:42:46.912725"]]
   [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 89ms (Views: 0.8ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-15 16:40:51 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"l", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "494bc381-6872-4053-8247-dd25e9ec9e03"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "l"], ["password_digest", "$2a$10$DIvwENtWUMNLLb.PAXP7luGb46e70q.RtpFucs863khvRdbDjGgOq"], ["token", "494bc381-6872-4053-8247-dd25e9ec9e03"], ["created_at", "2015-07-15 23:40:51.684511"], ["updated_at", "2015-07-15 23:40:51.684511"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 86ms (Views: 0.3ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-15 16:49:59 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"q", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "9d34e089-ed00-42ba-af62-f8645286e1cd"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "q"], ["password_digest", "$2a$10$/9uHeEUndndGqp.E9IroqeILFQfF3erjuIuQhaSr8ESbJNja92Dj2"], ["token", "9d34e089-ed00-42ba-af62-f8645286e1cd"], ["created_at", "2015-07-15 23:50:00.048787"], ["updated_at", "2015-07-15 23:50:00.048787"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 72ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 18:45:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (7.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb (75.1ms)
+Completed 200 OK in 128ms (Views: 85.8ms | ActiveRecord: 16.0ms)
+  [1m[36mPassenger Load (12.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" DESC LIMIT 1[0m
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 18:46:31 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mPassenger Load (5.7ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "b2309bf4-5ce5-4cb6-9b15-98e136a55eb3"]]
+  [1m[35mSQL (12.0ms)[0m  INSERT INTO "passengers" ("name", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "e"], ["password_digest", "$2a$10$V40J4pkbvaQs021ObLHPPunMzSkymLeVf7z/W/HZ.iv2/nOl0mKu."], ["token", "b2309bf4-5ce5-4cb6-9b15-98e136a55eb3"], ["created_at", "2015-07-17 01:46:31.827518"], ["updated_at", "2015-07-17 01:46:31.827518"]]
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 106ms (Views: 0.6ms | ActiveRecord: 23.4ms)
+  [1m[35mPassenger Load (0.5ms)[0m  SELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" DESC LIMIT 1
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 18:47:52 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "f2e33cf0-4c4c-40a6-817e-77eafaa619c7"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "a"], ["email", "a"], ["password_digest", "$2a$10$u.hupPTwW69agDU4d23YNOJmX2.Orxtp7USWBO24fO7RbIG1aw8sy"], ["token", "f2e33cf0-4c4c-40a6-817e-77eafaa619c7"], ["created_at", "2015-07-17 01:47:52.342894"], ["updated_at", "2015-07-17 01:47:52.342894"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 70ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 18:51:40 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"a", "email"=>"a", "phoneNumber"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+Unpermitted parameter: phoneNumber
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "eac8d20c-8b74-4326-8fec-3e73b82a91e2"]]
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "passengers" ("name", "email", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "a"], ["email", "a"], ["password_digest", "$2a$10$LD7q60UPql0TrXteklEOWOyVX3Kc5vYkPBMFPYOJfDk6ebf/MWT2S"], ["token", "eac8d20c-8b74-4326-8fec-3e73b82a91e2"], ["created_at", "2015-07-17 01:51:40.202630"], ["updated_at", "2015-07-17 01:51:40.202630"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 18:52:03 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"q", "email"=>"q", "phone_number"=>"q", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+Unpermitted parameter: phone_number
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "f05eeacb-6751-47dd-9a9f-bd8f2b1dcdf2"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "q"], ["email", "q"], ["password_digest", "$2a$10$qk9n8K7uCu5Go6swxA0F3ObNvBCBpklpujuBCsEQQ4TTCYTyMshAO"], ["token", "f05eeacb-6751-47dd-9a9f-bd8f2b1dcdf2"], ["created_at", "2015-07-17 01:52:03.501731"], ["updated_at", "2015-07-17 01:52:03.501731"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 18:53:57 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"s", "email"=>"s", "phone_number"=>"s", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+Unpermitted parameter: phone_number
+Completed 500 Internal Server Error in 81ms
+
+NameError (undefined local variable or method `passengers_params' for #<PassengersController:0x007fd734158368>):
+  app/controllers/passengers_controller.rb:22:in `create'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x007fd734f081c0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fd734f13e80 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fd734f10f28 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 18:55:27 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"s", "email"=>"s", "phone_number"=>"s", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 115ms
+
+NameError (undefined local variable or method `passengers_params' for #<PassengersController:0x007fd739993e88>):
+  app/controllers/passengers_controller.rb:22:in `create'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.4ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x007fd734f081c0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fd734f13e80 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fd734f10f28 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 18:55:48 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"s", "email"=>"s", "phone_number"=>"s", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "acc79826-14ac-48b3-ad56-eb7443584bad"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "s"], ["email", "s"], ["phone_number", "s"], ["password_digest", "$2a$10$.5XIgJL2OWpJ3PPBXgdtiOW.fcNpUPM5MkoDduOm/.gnzqsWD3q5u"], ["token", "acc79826-14ac-48b3-ad56-eb7443584bad"], ["created_at", "2015-07-17 01:55:49.022585"], ["updated_at", "2015-07-17 01:55:49.022585"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 78ms (Views: 0.4ms | ActiveRecord: 2.5ms)

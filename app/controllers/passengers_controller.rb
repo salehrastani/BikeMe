@@ -15,13 +15,13 @@ class PassengersController < ApplicationController
   end
 
   def create
-    p "were in create before params -------------------------------"
+    p "non-permitted params -------------------------------------------"
+    p params
     @passenger = Passenger.new(passenger_params)
-    p "-----------------------------------------------"
-    p "were in!!!!!!!!!!"
+    p "permitted params -----------------------------------------------"
+    p passenger_params
     if @passenger.save
-      p "---------------------------------------------"
-      p "were saved!!!!"
+      p "were saved --------------------------------------------"
       render json: @passenger, status: 200
     else
       render nothing: true, status: 401
@@ -31,11 +31,8 @@ class PassengersController < ApplicationController
   def login
     @passenger = Passenger.find_by_email(params[:passenger][:email])
     if @passenger && @passenger.authenticate(params[:passenger][:password])
-      # session[:passenger_id] = passenger.id
-      # redirect_to passenger_dashboard_path(passenger.id)
       render json: @passenger, status: 200
     else
-      # redirect_to '/passengers/new', :notice => "Invalid login. Try again"
       render nothing: true, status: 401
     end
   end
@@ -68,7 +65,7 @@ class PassengersController < ApplicationController
 
   private
   def passenger_params
-    params.permit(:name, :email, :password, :password_confirmation)
+    params.permit(:name, :email, :phone_number, :password, :password_confirmation)
   end
 
 end
