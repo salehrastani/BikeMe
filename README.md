@@ -1,6 +1,6 @@
 #BikeMe
 
-This is an API for a [BikeMe-Mobile](https://github.com/salehrastani/BikeMe-mobile) that will get you anywhere you wanna go within minutes. Imagine getting off of work and requesting a car from a ridesharing service at rush hour. The traffic is insane and you will be most probably paying a surged price. Meanwhile there are motorcycles splitting lanes and getting to wherever they want without a hassle. You could use BikeMe to get to where you wanna go in minutes.
+This is an API for [BikeMe-Mobile](https://github.com/salehrastani/BikeMe-mobile) that will get you anywhere you wanna go within minutes. Imagine getting off of work and requesting a car from a ridesharing service at rush hour. The traffic is insane and you will be most probably paying a surged price. Meanwhile there are motorcycles splitting lanes and getting to wherever they want without a hassle. You could use BikeMe to get to where you wanna go in minutes.
 
 
 ##User Stories:
