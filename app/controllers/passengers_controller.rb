@@ -21,10 +21,6 @@ class PassengersController < ApplicationController
   end
 
   def login
-    p "--------------------------------------------"
-    p passenger_params
-    p "=================================="
-    p params
     @passenger = Passenger.find_by_email(passenger_params[:email])
     if @passenger && @passenger.authenticate(passenger_params[:password])
       render json: @passenger, status: 200
