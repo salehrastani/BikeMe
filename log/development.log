@@ -17359,3 +17359,241 @@ Can't verify CSRF token authenticity
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$Rva9Zx2KItwtIlvFdFwDFOWJFU/HlZJXwnUO6KLGz6WdjnG6efBG."], ["token", "f034136e-796c-48ee-a64c-d0eb0fc0146f"], ["created_at", "2015-07-19 19:15:15.573798"], ["updated_at", "2015-07-19 19:15:15.573798"]]
   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:47:21 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"g", "email"=>"g", "phone_number"=>"g", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "7362ecd4-d53c-4db4-9f55-d7ce7805bfed"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "g"], ["email", "g"], ["phone_number", "g"], ["password_digest", "$2a$10$N2j1yQxR/0o16Rsaa3RdTuTP5olf6td2OmxBSXXDCEgAxOB.Ub0u."], ["token", "7362ecd4-d53c-4db4-9f55-d7ce7805bfed"], ["created_at", "2015-07-19 19:47:21.192807"], ["updated_at", "2015-07-19 19:47:21.192807"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 77ms (Views: 0.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 12:51:00 -0700
+Processing by PassengersController#show as HTML
+  Parameters: {"id"=>"login"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 12:51:20 -0700
+Processing by PassengersController#show as HTML
+  Parameters: {"id"=>"login"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+  [1m[36mPassenger Load (0.6ms)[0m  [1mSELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" DESC LIMIT 1[0m
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 12:54:58 -0700
+Processing by PassengersController#show as HTML
+  Parameters: {"id"=>"login"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 12:55:29 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PassengersController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (40.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-19 12:56:04 -0700
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb (1.0ms)
+Completed 200 OK in 14ms (Views: 4.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 12:56:37 -0700
+Processing by PassengersController#show as HTML
+  Parameters: {"id"=>"login"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:00:01 -0700
+Processing by PassengersController#show as HTML
+  Parameters: {"id"=>"login"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:03:44 -0700
+Processing by PassengersController#show as HTML
+  Parameters: {"id"=>"login"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:04:03 -0700
+Processing by PassengersController#show as HTML
+  Parameters: {"id"=>"login"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:09:15 -0700
+Processing by PassengersController#login as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/passengers_controller.rb:27:in `login'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (25.6ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:12:25 -0700
+Processing by PassengersController#login as HTML
+  [1m[35mPassenger Load (0.3ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1
+  Rendered text template (0.1ms)
+Completed 401 Unauthorized in 76ms (Views: 3.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:13:54 -0700
+Processing by PassengersController#login as HTML
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 73ms (Views: 1.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:16:08 -0700
+Processing by PassengersController#login as HTML
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 67ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:24:14 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#login as HTML
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 96ms (Views: 7.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:25:01 -0700
+Processing by PassengersController#login as HTML
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 76ms (Views: 2.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:37:23 -0700
+Processing by PassengersController#login as HTML
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 70ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:37:30 -0700
+Processing by PassengersController#login as HTML
+  [1m[36mPassenger Load (0.3ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 64ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:38:27 -0700
+Processing by PassengersController#login as HTML
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 66ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:38:42 -0700
+Processing by PassengersController#login as HTML
+  [1m[36mPassenger Load (0.3ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 69ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/passengers/login" for ::1 at 2015-07-19 13:39:26 -0700
+Processing by PassengersController#login as HTML
+  [1m[35mPassenger Load (0.2ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" IS NULL LIMIT 1
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 80ms (Views: 1.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 13:39:44 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"o", "email"=>"o", "phone_number"=>"o", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPassenger Load (0.2ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1  [["token", "e019b10a-4479-4e9e-9624-bd3ac6a2ed24"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "o"], ["email", "o"], ["phone_number", "o"], ["password_digest", "$2a$10$2ns/TYNMXZYkwQMfnD5PJObKbunJKWYBn/IBiHLW6LQsQZWXDYroK"], ["token", "e019b10a-4479-4e9e-9624-bd3ac6a2ed24"], ["created_at", "2015-07-19 20:39:44.610203"], ["updated_at", "2015-07-19 20:39:44.610203"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+Completed 200 OK in 83ms (Views: 0.6ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 13:40:53 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 1.4ms)

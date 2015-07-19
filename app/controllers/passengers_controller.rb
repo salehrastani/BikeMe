@@ -11,9 +11,6 @@ class PassengersController < ApplicationController
     render :new
   end
 
-  def show
-  end
-
   def create
     @passenger = Passenger.new(passenger_params)
     if @passenger.save
@@ -24,16 +21,25 @@ class PassengersController < ApplicationController
   end
 
   def login
-    @passenger = Passenger.find_by_email(params[:passenger][:email])
-    if @passenger && @passenger.authenticate(params[:passenger][:password])
+    p "--------------------------------------------"
+    p passenger_params
+    p "=================================="
+    p params
+    @passenger = Passenger.find_by_email(passenger_params[:email])
+    if @passenger && @passenger.authenticate(passenger_params[:password])
       render json: @passenger, status: 200
     else
       render nothing: true, status: 401
+      p "you are not authorized you son of a bitch!"
     end
   end
 
   def authorize
     redirect_to '/passengers/new' unless current_passenger
+  end
+
+  def show
+    p "were are in show action"
   end
 
   def logout
@@ -45,6 +51,7 @@ class PassengersController < ApplicationController
     @passenger =Passenger.find(params[:passenger_id])
     render :dashboard
   end
+
 
 
   def update
