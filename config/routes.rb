@@ -7,14 +7,14 @@ Rails.application.routes.draw do
     get '/dashboard' => 'passengers#dashboard'
     delete '/logout'  => 'passengers#logout'
   end
-  post '/passengers/login'   => 'passengers#login'
+  get '/passengers/login'   => 'passengers#login'
 
 
   resources :drivers do
     get '/dashboard' => 'drivers#dashboard'
     delete '/logout' => 'drivers#logout'
   end
-  post '/drivers/login' => 'drivers#login'
+  get'/drivers/login' => 'drivers#login'
 
 
   resources :trips do

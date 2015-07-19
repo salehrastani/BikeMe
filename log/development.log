@@ -17078,3 +17078,284 @@ Can't verify CSRF token authenticity
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "s"], ["email", "s"], ["phone_number", "s"], ["password_digest", "$2a$10$.5XIgJL2OWpJ3PPBXgdtiOW.fcNpUPM5MkoDduOm/.gnzqsWD3q5u"], ["token", "acc79826-14ac-48b3-ad56-eb7443584bad"], ["created_at", "2015-07-17 01:55:49.022585"], ["updated_at", "2015-07-17 01:55:49.022585"]]
   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 78ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 19:21:21 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"s", "email"=>"s", "phone_number"=>"s", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "07b38e0d-1caf-476c-a2f1-2785c66c68d1"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "s"], ["email", "s"], ["phone_number", "s"], ["password_digest", "$2a$10$Jiz3dU09lK93OnZYWKX6ce/80wUBqOOvdH8PxrGTn.nZVGDRprgiy"], ["token", "07b38e0d-1caf-476c-a2f1-2785c66c68d1"], ["created_at", "2015-07-17 02:21:21.990146"], ["updated_at", "2015-07-17 02:21:21.990146"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 76ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 19:31:30 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"d", "email"=>"d", "phone_number"=>"d", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "49990bed-5f1a-4e09-a63b-e8a2867b199f"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "d"], ["email", "d"], ["phone_number", "d"], ["password_digest", "$2a$10$WCFl0g37ne/4uPdw5/vf/uuBZ.Cj0e2QRSj7VXDTy/pUAtJkhJOHO"], ["token", "49990bed-5f1a-4e09-a63b-e8a2867b199f"], ["created_at", "2015-07-17 02:31:30.981095"], ["updated_at", "2015-07-17 02:31:30.981095"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 19:31:53 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"d", "email"=>"d", "phone_number"=>"d", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "84c84e24-8071-4df6-bbf4-1714d3ac994b"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "d"], ["email", "d"], ["phone_number", "d"], ["password_digest", "$2a$10$sfmgK3A7s8aijRkGPR90M.MFQ0wAovSA7yx04oLkZIVHeLg/oRt/W"], ["token", "84c84e24-8071-4df6-bbf4-1714d3ac994b"], ["created_at", "2015-07-17 02:31:53.802845"], ["updated_at", "2015-07-17 02:31:53.802845"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 19:33:30 -0700
+Processing by PassengersController#create as HTML
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "47348278-8bdb-4bbb-b2ae-155493f43e4f"]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 349ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 19:33:33 -0700
+Processing by PassengersController#create as HTML
+Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1  [["token", "0f727c10-b159-4b6f-ae8c-159c4fda7809"]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered text template (0.0ms)
+Completed 401 Unauthorized in 8ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-16 19:33:38 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "b13bf03c-2c56-40dc-a156-beafd6fa094e"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$F6JRx6/cNyg7STE5mMZ6k.WsXTtjVIJAR0GhYVTR0ZsLFYhZgBEPS"], ["token", "b13bf03c-2c56-40dc-a156-beafd6fa094e"], ["created_at", "2015-07-17 02:33:38.171959"], ["updated_at", "2015-07-17 02:33:38.171959"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 110ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-19 10:42:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (12.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb (21.8ms)
+Completed 200 OK in 56ms (Views: 30.1ms | ActiveRecord: 14.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 10:42:40 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mPassenger Load (23.4ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "86d80136-0828-4901-a195-8c7ec4bd3e1d"]]
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$Bbc9U1RsBj3NbI43dOkhSerVVmhWuF2L7v8P8ZrZSjEaVO7toqUcq"], ["token", "86d80136-0828-4901-a195-8c7ec4bd3e1d"], ["created_at", "2015-07-19 17:42:40.679301"], ["updated_at", "2015-07-19 17:42:40.679301"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 139ms (Views: 0.5ms | ActiveRecord: 27.0ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 10:43:18 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "e27ae05a-8a34-48d1-8bc8-58341e656dd8"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$3ps57g5rKz9WfcpJGbtszeR6hSM5XvKrb6v0LpwDvlivd3Rl7wm9."], ["token", "e27ae05a-8a34-48d1-8bc8-58341e656dd8"], ["created_at", "2015-07-19 17:43:18.957262"], ["updated_at", "2015-07-19 17:43:18.957262"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 72ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 10:44:18 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"q", "email"=>"q", "phone_number"=>"q", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "c6004876-1be2-4234-ae14-0e7293f22bf4"]]
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "q"], ["email", "q"], ["phone_number", "q"], ["password_digest", "$2a$10$OvIRosgrUjOYg0U1bAYio.ShsUUiBh9Pcmdve12jIurrD1.WhA8HC"], ["token", "c6004876-1be2-4234-ae14-0e7293f22bf4"], ["created_at", "2015-07-19 17:44:18.934009"], ["updated_at", "2015-07-19 17:44:18.934009"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+  [1m[36mPassenger Load (0.6ms)[0m  [1mSELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" DESC LIMIT 1[0m
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 11:15:21 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"r", "email"=>"r", "phone_number"=>"r", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "2bb5c0ce-79d6-478c-af14-e46408c4f2d3"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "r"], ["email", "r"], ["phone_number", "r"], ["password_digest", "$2a$10$d/yu9QVw5vn2SGh7LYxNtucVLXbA1Qvqo0O9TEagYJB5LuhPBJ6d."], ["token", "2bb5c0ce-79d6-478c-af14-e46408c4f2d3"], ["created_at", "2015-07-19 18:15:21.709805"], ["updated_at", "2015-07-19 18:15:21.709805"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 76ms (Views: 0.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 11:16:07 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"q", "email"=>"q", "phone_number"=>"q", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "96f044bd-4f39-49c1-be8a-d16419b69ebc"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "q"], ["email", "q"], ["phone_number", "q"], ["password_digest", "$2a$10$HJJNdaLFKwTTXrOqhExubeEQaq0t3iKBAc2K.uqDNP22b39O3tcy6"], ["token", "96f044bd-4f39-49c1-be8a-d16419b69ebc"], ["created_at", "2015-07-19 18:16:07.811573"], ["updated_at", "2015-07-19 18:16:07.811573"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 11:55:51 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "73312de5-9b0d-4f64-a611-cf44a43ad1ae"]]
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$0XZyQiB/FSolYJr45J1iFOpuSFxBiDSHIFY8ZHtACFfreG0pDHFpa"], ["token", "73312de5-9b0d-4f64-a611-cf44a43ad1ae"], ["created_at", "2015-07-19 18:55:51.529261"], ["updated_at", "2015-07-19 18:55:51.529261"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 11:55:54 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "7061a782-a1a8-4eb2-b20a-3f1c8b4c66d3"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$J7k25YFwQ8FFRzym4p8mAupVTihzTlOdNvs/9JQ2Pn8JV2C9v9k6."], ["token", "7061a782-a1a8-4eb2-b20a-3f1c8b4c66d3"], ["created_at", "2015-07-19 18:55:54.904084"], ["updated_at", "2015-07-19 18:55:54.904084"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 11:56:30 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "f7cd7f46-f22f-4a87-8bfa-aa5ea3660ee7"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$ewU6e/86eow.tCZID/GBGelMDHUnyW5Z8ZAuvNMLnxk8vel1xLfjm"], ["token", "f7cd7f46-f22f-4a87-8bfa-aa5ea3660ee7"], ["created_at", "2015-07-19 18:56:30.445631"], ["updated_at", "2015-07-19 18:56:30.445631"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 72ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:03:19 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "951ae507-5204-4a75-8aef-0f9bfed5bac2"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$hGrXfXnExgGI7p7yYy1Tseb4ITt36oLha7tDJThqpcanLs8mB1W/C"], ["token", "951ae507-5204-4a75-8aef-0f9bfed5bac2"], ["created_at", "2015-07-19 19:03:19.335833"], ["updated_at", "2015-07-19 19:03:19.335833"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:04:56 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "21007181-83d7-43ac-a2a6-7bc7f225fe43"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$fGSCOHraMszRUKAdYoYWP.QXOzDFzvLC6io8QxGNRDpYhwRvgsOIS"], ["token", "21007181-83d7-43ac-a2a6-7bc7f225fe43"], ["created_at", "2015-07-19 19:04:57.024193"], ["updated_at", "2015-07-19 19:04:57.024193"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:05:12 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "0f826de0-00f4-469d-a586-c180765a117e"]]
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$KP0v/wbA4PBAQx7aXbJmZ.8FFl5hvrmye1LMO.ljCFw8fP7O/4CP6"], ["token", "0f826de0-00f4-469d-a586-c180765a117e"], ["created_at", "2015-07-19 19:05:12.917867"], ["updated_at", "2015-07-19 19:05:12.917867"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:06:56 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "476c23af-71e0-4cf6-913e-3920aa0b6aad"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$Hb6tHgoF9nNRlBX2v38mEOKK4MaIiixJWpH3TuvzYlsNeji/Zl8tO"], ["token", "476c23af-71e0-4cf6-913e-3920aa0b6aad"], ["created_at", "2015-07-19 19:06:56.402757"], ["updated_at", "2015-07-19 19:06:56.402757"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:07:16 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "13718a00-a9b1-4f1f-9012-b011c61d9a07"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$mNCBgVqDpsXLM4ZZM0embOzFWYQzp4r5cYYt6ATSswS7VKlruxpuu"], ["token", "13718a00-a9b1-4f1f-9012-b011c61d9a07"], ["created_at", "2015-07-19 19:07:16.847400"], ["updated_at", "2015-07-19 19:07:16.847400"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 71ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:11:11 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "8f51e892-1e49-4bdf-a4e2-1fb88d7600b8"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$RUw51FsgrfcUOrW96lX2KOalbfNWVOsxL5BJbyPmCNER4X0ImCAoK"], ["token", "8f51e892-1e49-4bdf-a4e2-1fb88d7600b8"], ["created_at", "2015-07-19 19:11:11.994849"], ["updated_at", "2015-07-19 19:11:11.994849"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:11:43 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "617c02de-bf2e-4f62-ac57-c563991aadd0"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$v0wsRBa4QG8r7NkYyGLmfuuX1OdCNIfDXtHyV/K/6NAUb8MCxNUau"], ["token", "617c02de-bf2e-4f62-ac57-c563991aadd0"], ["created_at", "2015-07-19 19:11:43.130645"], ["updated_at", "2015-07-19 19:11:43.130645"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 67ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:12:13 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "ebdf9828-b525-4925-9e9f-7ee5cb439f88"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$2OTpkatnaND8/Bc.Os/GLOPxt3jGNRdZ20/rt.61DGosdmszCVXRS"], ["token", "ebdf9828-b525-4925-9e9f-7ee5cb439f88"], ["created_at", "2015-07-19 19:12:13.690847"], ["updated_at", "2015-07-19 19:12:13.690847"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 72ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:14:13 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "0ea86c6a-ef54-4b35-94ac-16ab681fb063"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$ukjDg5WuyVMsLQB91S.AF.mbGYZsi9WU3EKzXP8vQjKDgykVI51sq"], ["token", "0ea86c6a-ef54-4b35-94ac-16ab681fb063"], ["created_at", "2015-07-19 19:14:13.915285"], ["updated_at", "2015-07-19 19:14:13.915285"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:14:52 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "f0846a88-297b-468a-873c-3f2e058606ed"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$5aT/dWm6p3Zk3XYPbz6TmuC4aQ5KqpWKpdMOXnHQcJnJXS9w/Kyqe"], ["token", "f0846a88-297b-468a-873c-3f2e058606ed"], ["created_at", "2015-07-19 19:14:52.877618"], ["updated_at", "2015-07-19 19:14:52.877618"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 73ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/passengers" for ::1 at 2015-07-19 12:15:15 -0700
+Processing by PassengersController#create as HTML
+  Parameters: {"name"=>"w", "email"=>"w", "phone_number"=>"w", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."token" = $1  ORDER BY "passengers"."id" ASC LIMIT 1[0m  [["token", "f034136e-796c-48ee-a64c-d0eb0fc0146f"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "passengers" ("name", "email", "phone_number", "password_digest", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "w"], ["email", "w"], ["phone_number", "w"], ["password_digest", "$2a$10$Rva9Zx2KItwtIlvFdFwDFOWJFU/HlZJXwnUO6KLGz6WdjnG6efBG."], ["token", "f034136e-796c-48ee-a64c-d0eb0fc0146f"], ["created_at", "2015-07-19 19:15:15.573798"], ["updated_at", "2015-07-19 19:15:15.573798"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 1.1ms)

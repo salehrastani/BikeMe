@@ -15,13 +15,8 @@ class PassengersController < ApplicationController
   end
 
   def create
-    p "non-permitted params -------------------------------------------"
-    p params
     @passenger = Passenger.new(passenger_params)
-    p "permitted params -----------------------------------------------"
-    p passenger_params
     if @passenger.save
-      p "were saved --------------------------------------------"
       render json: @passenger, status: 200
     else
       render nothing: true, status: 401
