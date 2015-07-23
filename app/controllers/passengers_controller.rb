@@ -12,6 +12,8 @@ class PassengersController < ApplicationController
   end
 
   def create
+    p "------------------------------------------------"
+    p "we are in the create method"
     @passenger = Passenger.new(passenger_params)
     if @passenger.save
       render json: @passenger, status: 200
