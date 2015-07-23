@@ -26,7 +26,6 @@ class PassengersController < ApplicationController
       render json: @passenger, status: 200
     else
       render nothing: true, status: 401
-      p "you are not authorized you son of a bitch!"
     end
   end
 

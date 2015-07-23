@@ -17597,3 +17597,195 @@ Processing by PassengersController#login as HTML
 Can't verify CSRF token authenticity
   [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
 Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 17:36:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.3ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 84ms (Views: 0.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 17:37:07 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.5ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 66ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 17:59:01 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.9ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 71ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 17:59:36 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.3ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 65ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:00:39 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.5ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:01:32 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 66ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:08:07 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.1ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 69ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:09:06 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.7ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:10:18 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 65ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:30:46 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:49:15 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.1ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 66ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:53:04 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 67ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 18:54:35 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.2ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 64ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 19:17:50 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.1ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 19:22:17 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.2ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 65ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 19:38:45 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 19:48:25 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.2ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 65ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 19:49:29 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 19:49:51 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.2ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 63ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 19:50:05 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 66ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-19 19:50:23 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.2ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 63ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-23 10:22:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (12.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#index as HTML
+  Rendered passengers/index.html.erb (11.4ms)
+Completed 200 OK in 55ms (Views: 26.4ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-23 10:31:12 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-23 10:31:31 -0700
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "g"]]
+Completed 200 OK in 67ms (Views: 0.6ms | ActiveRecord: 0.2ms)
