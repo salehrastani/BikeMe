@@ -17814,3 +17814,11 @@ Started GET "/" for ::1 at 2015-07-28 15:22:08 -0700
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/passengers/login" for ::1 at 2015-07-28 15:41:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PassengersController#login as HTML
+  Parameters: {"email"=>"g", "password"=>"[FILTERED]"}
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1  [["email", "g"]]
+Completed 200 OK in 86ms (Views: 0.6ms | ActiveRecord: 2.9ms)
