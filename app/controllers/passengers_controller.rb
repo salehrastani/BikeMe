@@ -3,12 +3,12 @@ class PassengersController < ApplicationController
 
   def index
     @passenger = Passenger.new
-    render :index
+    render json: @passenger
   end
 
   def new
     @passenger = Passenger.new
-    render :new
+    render json: @passenger
   end
 
   def create
@@ -20,6 +20,9 @@ class PassengersController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def login
     @passenger = Passenger.find_by_email(passenger_params[:email])
     if @passenger && @passenger.authenticate(passenger_params[:password])
@@ -29,34 +32,16 @@ class PassengersController < ApplicationController
     end
   end
 
-  def authorize
-    redirect_to '/passengers/new' unless current_passenger
-  end
-
-  def show
-    p "were are in show action"
-  end
-
-  def logout
-    # session[:passenger_id] = nil
-    redirect_to '/'
-  end
 
   def dashboard
-    @passenger =Passenger.find(params[:passenger_id])
-    render :dashboard
+    render json: current_passenger
   end
-
-
 
   def update
     current_passenger.update(passenger_params)
     render json: current_passenger
   end
 
-  # to destroy user
-  def destroy
-  end
 
 
 

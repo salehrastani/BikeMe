@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'passengers#index'
+  # root 'passengers#index'
 
   post '/passengers/login'   => 'passengers#login'
 
   resources :passengers do
     get '/dashboard' => 'passengers#dashboard'
-    delete '/logout'  => 'passengers#logout'
   end
 
   post '/drivers/login' => 'drivers#login'
