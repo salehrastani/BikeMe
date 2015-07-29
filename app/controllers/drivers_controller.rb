@@ -12,6 +12,8 @@ class DriversController < ApplicationController
   end
 
   def create
+    p "-----------------------------------------------------"
+    p "we are in the create method"
     @driver = Driver.new(driver_params)
     if @driver.save
       render json: @driver, status: 200

@@ -17994,3 +17994,106 @@ Processing by PassengersController#login as HTML
   Parameters: {"email"=>"l", "password"=>"[FILTERED]"}
   [1m[36mPassenger Load (0.7ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."email" = $1 LIMIT 1[0m  [["email", "l"]]
 Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-07-28 22:30:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drivers" for ::1 at 2015-07-28 22:31:03 -0700
+Processing by DriversController#create as HTML
+  Parameters: {"name"=>"d", "email"=>"d", "phone_number"=>"d", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDriver Load (13.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."token" = '44f83fb6-8cff-4f87-91de-f87f28f457ce'  ORDER BY "drivers"."id" ASC LIMIT 1[0m
+PG::UndefinedColumn: ERROR:  column drivers.token does not exist
+LINE 1: SELECT  "drivers".* FROM "drivers" WHERE "drivers"."token" =...
+                                                 ^
+: SELECT  "drivers".* FROM "drivers" WHERE "drivers"."token" = '44f83fb6-8cff-4f87-91de-f87f28f457ce'  ORDER BY "drivers"."id" ASC LIMIT 1
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 100ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column drivers.token does not exist
+LINE 1: SELECT  "drivers".* FROM "drivers" WHERE "drivers"."token" =...
+                                                 ^
+: SELECT  "drivers".* FROM "drivers" WHERE "drivers"."token" = '44f83fb6-8cff-4f87-91de-f87f28f457ce'  ORDER BY "drivers"."id" ASC LIMIT 1):
+  app/models/driver.rb:22:in `block in generate_token'
+  app/models/driver.rb:20:in `loop'
+  app/models/driver.rb:20:in `generate_token'
+  app/models/driver.rb:10:in `ensure_token'
+  app/controllers/drivers_controller.rb:18:in `create'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x007fb9796f40e8 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fb9796ffda8 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fb9796fce50 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTokenToDrivers (20150729053554)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.8ms)[0m  [1mALTER TABLE "drivers" ADD "token" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150729053554"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'drivers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'passengers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'trips'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'vehicles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started POST "/drivers" for ::1 at 2015-07-28 22:37:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DriversController#create as HTML
+  Parameters: {"name"=>"d", "email"=>"d", "phone_number"=>"d", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDriver Load (1.2ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."token" = $1  ORDER BY "drivers"."id" ASC LIMIT 1[0m  [["token", "7f3bf00e-a8f2-48da-9aa5-d6f717f8e6cd"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "drivers" ("name", "email", "password_digest", "phone_number", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "d"], ["email", "d"], ["password_digest", "$2a$10$pERxWViXYSoQlpQqkZ4NJelk6vmMMnd1fJMQLn78x/jSga7T0BK.W"], ["phone_number", "d"], ["token", "7f3bf00e-a8f2-48da-9aa5-d6f717f8e6cd"], ["created_at", "2015-07-29 05:37:07.649317"], ["updated_at", "2015-07-29 05:37:07.649317"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 79ms (Views: 0.4ms | ActiveRecord: 3.4ms)
