@@ -1,69 +1,52 @@
 class DriversController < ApplicationController
+  before_action :signed_in_driver?, only: [:dashboard, :update, :logout, :destroy]
 
   def index
     @driver = Driver.new
-    render :index
+    render json: @driver
   end
 
   def new
     @driver = Driver.new
-    render :new
+    render json: @driver
   end
 
   def create
-    driver = Driver.new(driver_params)
-    if driver.save
-      session[:driver_id] = driver.id
-      redirect_to driver_dashboard_path(driver.id)
+    @driver = Driver.new(driver_params)
+    if @driver.save
+      render json: @driver, status: 200
     else
-      redirect_to 'driver/new', :notice => "ewww, please try again"
+      render nothing: true, status: 401
     end
-  end
-
-  def login
-    driver = Driver.find_by_email(params[:passenger][:email])
-    # If the user exists AND the password entered is correct.
-    if driver && driver.authenticate(params[:driver][:password])
-      # Save the user id inside the browser cookie. This is how we keep the user
-      # logged in when they navigate around our website.
-      session[:driver_id] = driver.id
-      redirect_to driver_dashboard_path(driver.id)
-
-    else
-    # If user's login doesn't work, send them back to the login form.
-      redirect_to '/drivers/new', :notice => "Invalid login. Try again"
-    end
-  end
-
-  def authorize
-    redirect_to '/drivers/new' unless current_driver
-  end
-
-  def logout
-    session[:driver_id] = nil
-    redirect_to 'drivers/login'
-  end
-
-  def dashboard
-    @driver = Driver.find(session[:driver_id])
-    render :dashboard
   end
 
   def show
   end
 
-  def update
+  def login
+    @driver = Driver.find_by_email(driver_params[:email])
+    if @driver && @driver.authenticate(driver_params[:password])
+      render json: @driver, status: 200
+    else
+      render nothing: true, status: 401
+    end
   end
 
-  # to destroy user
-  def destroy
+  def dashboard
+
+    render json: current_driver
+  end
+
+  def update
+    current_driver.update(driver_params)
+    render json: current_driver
   end
 
 
 
   private
   def driver_params
-    params.require(:driver).permit(:name, :email, :password, :password_confirmation)
+    params.require(:driver).permit(:name, :email, :password, :phone_number, :password_confirmation)
   end
 
 end

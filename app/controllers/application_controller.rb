@@ -11,7 +11,7 @@ class ApplicationController < ActionController::API
     end
     helper_method :current_passenger
 
-    def signed_in?
+    def signed_in_passenger?
      @passenger = Passenger.find_by(email: request.headers["email"])
      if @passenger && @passenger.token = request.headers["token"]
        true
@@ -19,7 +19,22 @@ class ApplicationController < ActionController::API
        render nothing: true, status: 401
      end
     end
-    helper_method :signed_in?
+    helper_method :signed_in_passenger?
 
+
+    def current_driver
+      @current_driver ||= Driver.find_by(email: request.headers["email"])
+    end
+    helper_method :current_driver
+
+    def signed_in_driver?
+     @driver = Driver.find_by(email: request.headers["email"])
+     if @driver && @driver.token = request.headers["token"]
+       true
+     else
+       render nothing: true, status: 401
+     end
+    end
+    helper_method :signed_in_driver?
 
 end

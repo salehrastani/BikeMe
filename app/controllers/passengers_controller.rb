@@ -1,5 +1,5 @@
 class PassengersController < ApplicationController
-  before_action :signed_in?, only: [:dashboard, :update, :logout, :destroy]
+  before_action :signed_in_passenger?, only: [:dashboard, :update, :logout, :destroy]
 
   def index
     @passenger = Passenger.new
