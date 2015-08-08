@@ -28,6 +28,7 @@ class DriversController < ApplicationController
   def login
     @driver = Driver.find_by_email(driver_params[:email])
     if @driver && @driver.authenticate(driver_params[:password])
+      current_driver(@driver)
       render json: @driver, status: 200
     else
       render nothing: true, status: 401
