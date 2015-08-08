@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
   # root 'passengers#index'
-
   post '/passengers/login'   => 'passengers#login'
 
   resources :passengers do
     get '/dashboard' => 'passengers#dashboard'
   end
 
+  post 'drivers/stripe' => 'drivers#stripe'
   post '/drivers/login' => 'drivers#login'
 
   resources :drivers do

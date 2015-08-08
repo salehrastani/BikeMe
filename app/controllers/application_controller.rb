@@ -23,6 +23,8 @@ class ApplicationController < ActionController::API
 
 
     def current_driver
+      p "in curren_driver method --------------------------------"
+      p request.headers
       @current_driver ||= Driver.find_by(email: request.headers["email"])
     end
     helper_method :current_driver
