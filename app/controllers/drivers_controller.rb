@@ -12,8 +12,6 @@ class DriversController < ApplicationController
   end
 
   def create
-    p "-----------------------------------------------------"
-    p "we are in the create method"
     @driver = Driver.new(driver_params)
     if @driver.save
       render json: @driver, status: 200
@@ -28,7 +26,6 @@ class DriversController < ApplicationController
   def login
     @driver = Driver.find_by_email(driver_params[:email])
     if @driver && @driver.authenticate(driver_params[:password])
-      current_driver(@driver)
       render json: @driver, status: 200
     else
       render nothing: true, status: 401
@@ -41,10 +38,14 @@ class DriversController < ApplicationController
 
   def stripe
     p "-------------------------------------"
-    p params
+    p params[:token]
     p current_driver
-    current_driver.stripe_token = stripe_token_params[:token]
-    render json: current_driver
+    @driver = current_driver
+    p @driver.stripe_token
+    @driver.stripe_token = params[:token]
+    p @driver.stripe_token
+    p "we got to the bottom of the action ----------------------------"
+    render json: @driver
   end
 
   def update
