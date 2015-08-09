@@ -40,8 +40,11 @@ class DriversController < ApplicationController
   end
 
   def stripe
+    p "-------------------------------------"
+    p params
+    p current_driver
     current_driver.stripe_token = stripe_token_params[:token]
-    render json: current_driver.stripe_token
+    render json: current_driver
   end
 
   def update

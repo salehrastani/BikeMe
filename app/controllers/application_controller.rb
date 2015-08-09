@@ -22,8 +22,7 @@ class ApplicationController < ActionController::API
     helper_method :signed_in_passenger?
 
 
-    def current_driver(driver)
-      @current_driver = driver
+    def current_driver
       @current_driver ||= Driver.find_by(email: request.headers["email"])
     end
     helper_method :current_driver
