@@ -34,14 +34,21 @@ class PassengersController < ApplicationController
 
 
   def dashboard
-    render json: current_passenger
+    @passenger = current_passenger
+    render json: @passenger
+  end
+
+ def stripe
+    @passenger = current_passenger
+    @passenger.stripe_token = params[:stripe_token]
+    render json: @passenger
   end
 
   def update
-    current_passenger.update(passenger_params)
-    render json: current_passenger
+    @passenger = current_passenger
+    @passenger.update(passenger_params)
+    render json: @passenger
   end
-
 
 
 

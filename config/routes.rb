@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   # root 'passengers#index'
+  post 'passengers/stripe' => 'passengers#stripe'
   post '/passengers/login'   => 'passengers#login'
 
   resources :passengers do

@@ -33,24 +33,20 @@ class DriversController < ApplicationController
   end
 
   def dashboard
-    render json: current_driver
+    @driver = current_driver
+    render json: @driver
   end
 
   def stripe
-    p "-------------------------------------"
-    p params[:token]
-    p current_driver
     @driver = current_driver
-    p @driver.stripe_token
-    @driver.stripe_token = params[:token]
-    p @driver.stripe_token
-    p "we got to the bottom of the action ----------------------------"
+    @driver.stripe_token = params[:stripe_token]
     render json: @driver
   end
 
   def update
-    current_driver.update(driver_params)
-    render json: current_driver
+    @driver = current_driver
+    @driver.update(driver_params)
+    render json: @driver
   end
 
 
@@ -58,10 +54,6 @@ class DriversController < ApplicationController
   private
   def driver_params
     params.permit(:name, :email, :password, :phone_number, :password_confirmation)
-  end
-
-  def stripe_token_params
-    params.permit(:token)
   end
 
 end
