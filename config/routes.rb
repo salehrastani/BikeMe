@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'locations/create'
+  post 'locations/create' => 'locations#create'
 
   # root 'passengers#index'
   post 'passengers/stripe' => 'passengers#stripe'
