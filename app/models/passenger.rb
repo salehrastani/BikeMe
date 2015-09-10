@@ -1,5 +1,8 @@
 class Passenger < ActiveRecord::Base
   has_many :trips
+  has_many :ratings, as: :ratable
+  has_many :locations, as: :locatable
+
 
   has_secure_password
   validates_confirmation_of :password, :message => "no-confirmation"

@@ -10,9 +10,6 @@
 # require 'faker'
 
 
-Passenger.create(name: "Saleh", email: "saleh@gmail.com", password: "saleh", phone_number: "4155356341")
-
-
 # --------- Original Seeds File ------------
 
 # 5.times do
