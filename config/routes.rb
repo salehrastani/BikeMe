@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'locations/create'
+
   # root 'passengers#index'
   post 'passengers/stripe' => 'passengers#stripe'
   post '/passengers/login'   => 'passengers#login'

@@ -1,7 +1,8 @@
 class Passenger < ActiveRecord::Base
   has_many :trips
   has_many :ratings, as: :ratable
-  has_many :locations, as: :locatable
+  has_one :location, as: :locatable
+
 
 
   has_secure_password
