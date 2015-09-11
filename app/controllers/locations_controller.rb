@@ -1,23 +1,31 @@
 class LocationsController < ApplicationController
    # before_action :location_params
-  def create_passenger_location
+  def set_passenger_location
     @passenger = current_passenger
-    @passenger.create_location(location_params)
+    if @passenger.location.nil?
+      @passenger.create_location(location_params)
+    else
+      @passenger.location.update_attributes(location_params)
+    end
     render json: @passenger.location
   end
 
-  def create_driver_location
+  def set_driver_location
     @driver = current_driver
-    @driver.create_location(location_params)
+    if @driver.location.nil?
+      @driver.create_location(location_params)
+    else
+      @driver.location.update_attributes(location_params)
+    end
     render json: @driver.location
   end
 
-  def passenger_location
+  def get_passenger_location
     @passenger = current_passenger
     render json: @passenger.location
   end
 
-  def driver_location
+  def get_driver_location
     @driver = current_driver
     render json: @driver.location
   end
