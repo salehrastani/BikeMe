@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-
-  post 'locations/create' => 'locations#create'
+  # locations controller
+  get 'passengers/location' => 'locations#passenger_location'
+  get 'drivers/location' => 'locations#driver_location'
+  post 'passengers/location' => 'locations#create_passenger_location'
+  post 'drivers/location' => 'locations#create_driver_location'
 
   # root 'passengers#index'
   post 'passengers/stripe' => 'passengers#stripe'

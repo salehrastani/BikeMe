@@ -1,8 +1,8 @@
 class CreateLocations < ActiveRecord::Migration
   def change
     create_table :locations do |t|
-      t.string :lat
-      t.string :lng
+      t.decimal :lat, precision: 10, scale: 6
+      t.decimal :lng, precision: 10, scale: 6
       t.integer :locatable_id
       t.string :locatable_type
 
