@@ -4,7 +4,17 @@ class ApplicationController < ActionController::API
 
   # protect_from_forgery with: :null_session
 
+
   private
+
+    def execute_sql(sql)
+      results = ActiveRecord::Base.connection.execute(sql)
+      if results.present?
+        return results
+      else
+        return nil
+      end
+    end
 
     def current_passenger
       @current_passenger ||= Passenger.find_by(email: request.headers["email"])

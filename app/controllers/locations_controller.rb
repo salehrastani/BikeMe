@@ -30,6 +30,13 @@ class LocationsController < ApplicationController
     render json: @driver.location
   end
 
+  def get_drivers_locations
+    sql = "SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'"
+    query = ActiveRecord::Base.connection.execute(sql)
+    @drivers_locations = {locations: query.values}
+    render json: @drivers_locations
+  end
+
   private
 
   def location_params

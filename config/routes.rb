@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'drivers/location' => 'locations#get_driver_location'
   post 'passengers/location' => 'locations#set_passenger_location'
   post 'drivers/location' => 'locations#set_driver_location'
-
+  get 'drivers/locations' => 'locations#get_drivers_locations'
   # root 'passengers#index'
   post 'passengers/stripe' => 'passengers#stripe'
   post '/passengers/login'   => 'passengers#login'

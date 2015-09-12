@@ -20718,3 +20718,302 @@ Processing by LocationsController#create_passenger_location as HTML
   [1m[36mSQL (0.1ms)[0m  [1mUPDATE "locations" SET "locatable_id" = $1, "updated_at" = $2 WHERE "locations"."id" = $3[0m  [["locatable_id", nil], ["updated_at", "2015-09-11 16:11:12.890665"], ["id", 7]]
   [1m[35m (0.3ms)[0m  COMMIT
 Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+  [1m[36mDriver Load (0.7ms)[0m  [1mSELECT "drivers".* FROM "drivers"[0m
+  [1m[35mDriver Load (0.4ms)[0m  SELECT "drivers".* FROM "drivers"
+  [1m[36mDriver Load (0.3ms)[0m  [1mSELECT "drivers".* FROM "drivers"[0m
+  [1m[35mDriver Load (0.7ms)[0m  SELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."locatable_id" = $1 AND "locations"."locatable_type" = $2 LIMIT 1[0m  [["locatable_id", 1], ["locatable_type", "Driver"]]
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" ASC LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."locatable_id" = $1 AND "locations"."locatable_type" = $2 LIMIT 1[0m  [["locatable_id", 1], ["locatable_type", "Passenger"]]
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" ASC LIMIT 1
+  [1m[36mPassenger Load (0.4ms)[0m  [1mSELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" ASC LIMIT 1[0m
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" ASC LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."locatable_id" = $1 AND "locations"."locatable_type" = $2 LIMIT 1[0m  [["locatable_id", 1], ["locatable_type", "Passenger"]]
+  [1m[35mPassenger Load (0.4ms)[0m  SELECT  "passengers".* FROM "passengers"  ORDER BY "passengers"."id" ASC LIMIT 1
+  [1m[36mPassenger Load (0.2ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35mPassenger Load (0.3ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mPassenger Load (0.5ms)[0m  [1mSELECT "passengers".* FROM "passengers"[0m
+  [1m[35mPassenger Load (0.3ms)[0m  SELECT  "passengers".* FROM "passengers" WHERE "passengers"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mPassenger Load (0.3ms)[0m  [1mSELECT  "passengers".* FROM "passengers" WHERE "passengers"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."locatable_id" = $1 AND "locations"."locatable_type" = $2 LIMIT 1  [["locatable_id", 7], ["locatable_type", "Passenger"]]
+  [1m[36m (0.5ms)[0m  [1mselect * from passengers[0m
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:37:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.6ms)[0m  SELECT * FROM drivers
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:46:25 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM drivers WHERE drivers.id = 7[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:47:26 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT * FROM drivers WHERE drivers.id = 7
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:48:56 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.9ms)[0m  [1mSELECT * FROM drivers WHERE drivers.id = 7[0m
+  Rendered text template (0.1ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:49:13 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT * FROM drivers
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:53:40 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (6.7ms)[0m  [1mSELECT * FROM drivers inner join locations on drivers.id = location.driver_id[0m
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "location"
+LINE 1: ...FROM drivers inner join locations on drivers.id = location.d...
+                                                             ^
+: SELECT * FROM drivers inner join locations on drivers.id = location.driver_id
+Completed 500 Internal Server Error in 8ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "location"
+LINE 1: ...FROM drivers inner join locations on drivers.id = location.d...
+                                                             ^
+: SELECT * FROM drivers inner join locations on drivers.id = location.driver_id):
+  app/controllers/locations_controller.rb:37:in `get_drivers_locations'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (21.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (66.2ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:54:17 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (1.4ms)[0m  SELECT * FROM drivers inner join locations on drivers.id = locations.driver_id
+PG::UndefinedColumn: ERROR:  column locations.driver_id does not exist
+LINE 1: ...FROM drivers inner join locations on drivers.id = locations....
+                                                             ^
+: SELECT * FROM drivers inner join locations on drivers.id = locations.driver_id
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column locations.driver_id does not exist
+LINE 1: ...FROM drivers inner join locations on drivers.id = locations....
+                                                             ^
+: SELECT * FROM drivers inner join locations on drivers.id = locations.driver_id):
+  app/controllers/locations_controller.rb:37:in `get_drivers_locations'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (45.2ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:55:22 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (2.5ms)[0m  [1mSELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'driver'[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.5ms)
+  [1m[36mDriver Load (0.4ms)[0m  [1mSELECT "drivers".* FROM "drivers"[0m
+  [1m[35mDriver Load (0.5ms)[0m  SELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "locations" ("lat", "lng", "locatable_id", "locatable_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["lat", "2222.0"], ["lng", "3333.0"], ["locatable_id", 1], ["locatable_type", "Driver"], ["created_at", "2015-09-12 00:56:26.207549"], ["updated_at", "2015-09-12 00:56:26.207549"]]
+  [1m[36m (5.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."locatable_id" = $1 AND "locations"."locatable_type" = $2 LIMIT 1  [["locatable_id", 1], ["locatable_type", "Driver"]]
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:56:54 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.4ms)[0m  SELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'driver'
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 17:58:27 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT * FROM drivers join locations on drivers.id = locations.locatable_id AND locatable_type = driver[0m
+PG::UndefinedColumn: ERROR:  column "driver" does not exist
+LINE 1: ...vers.id = locations.locatable_id AND locatable_type = driver
+                                                                 ^
+: SELECT * FROM drivers join locations on drivers.id = locations.locatable_id AND locatable_type = driver
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "driver" does not exist
+LINE 1: ...vers.id = locations.locatable_id AND locatable_type = driver
+                                                                 ^
+: SELECT * FROM drivers join locations on drivers.id = locations.locatable_id AND locatable_type = driver):
+  app/controllers/locations_controller.rb:37:in `get_drivers_locations'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.5ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:00:26 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.4ms)[0m  SELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:01:34 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:02:42 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.5ms)[0m  SELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `values' for nil:NilClass):
+  app/controllers/locations_controller.rb:39:in `get_drivers_locations'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (36.7ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:03:12 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:03:40 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.4ms)[0m  SELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `values' for nil:NilClass):
+  app/controllers/locations_controller.rb:39:in `get_drivers_locations'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (33.5ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:04:09 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:05:20 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.4ms)[0m  SELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:06:11 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:07:39 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.4ms)[0m  SELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:08:14 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:08:44 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.5ms)[0m  SELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:09:11 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT * FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:20:10 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.8ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:20:46 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:21:02 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.4ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-11 18:22:11 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver'[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
