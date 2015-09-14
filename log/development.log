@@ -22838,3 +22838,182 @@ Processing by LocationsController#get_drivers_locations as HTML
   [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:26:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (1.0ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:26:26 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:26:34 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:26:42 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:26:50 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:26:58 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:27:06 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:27:14 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:27:22 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:27:30 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:27:38 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:27:46 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:27:54 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:28:02 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:28:10 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:28:18 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:28:26 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:28:34 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:28:42 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:28:50 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:28:58 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:29:06 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:29:14 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:29:22 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:29:30 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:29:38 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:29:46 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:29:54 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drivers/locations" for ::1 at 2015-09-13 22:30:02 -0700
+Processing by LocationsController#get_drivers_locations as HTML
+  [1m[35m (0.3ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
