@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  # locations controller
+
+  get 'drivers/active' => 'drivers#activate'
   get 'passengers/location' => 'locations#get_passenger_location'
   get 'drivers/location' => 'locations#get_driver_location'
   post 'passengers/location' => 'locations#set_passenger_location'
   post 'drivers/location' => 'locations#set_driver_location'
   get 'drivers/locations' => 'locations#get_drivers_locations'
-  # root 'passengers#index'
   post 'passengers/stripe' => 'passengers#stripe'
   post '/passengers/login'   => 'passengers#login'
 

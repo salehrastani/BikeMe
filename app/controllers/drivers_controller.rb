@@ -49,7 +49,15 @@ class DriversController < ApplicationController
     render json: @driver
   end
 
-
+  def activate
+    @driver = current_driver
+    if @driver.active == false
+      @driver.active = true
+    else
+      @driver.active = false
+    end
+    render json: @driver.active
+  end
 
   private
   def driver_params
