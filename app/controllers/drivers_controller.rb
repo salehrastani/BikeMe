@@ -52,16 +52,16 @@ class DriversController < ApplicationController
   def activate
     @driver = current_driver
     if @driver.active == false
-      @driver.active = true
+      @driver.update(driver_params)
     else
-      @driver.active = false
+      @driver.update(driver_params)
     end
     render json: @driver.active
   end
 
   private
   def driver_params
-    params.permit(:name, :email, :password, :phone_number, :password_confirmation)
+    params.permit(:name, :email, :password, :phone_number, :password_confirmation, :active)
   end
 
 end
