@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   post 'drivers/activate' => 'drivers#activate'
   get 'passengers/location' => 'locations#get_passenger_location'
   get 'drivers/location' => 'locations#get_driver_location'

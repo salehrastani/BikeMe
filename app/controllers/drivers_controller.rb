@@ -51,7 +51,15 @@ class DriversController < ApplicationController
 
   def activate
     @driver = current_driver
+<<<<<<< HEAD
     @driver.update(driver_params)
+=======
+    if @driver.active == false
+      @driver.update(driver_params)
+    else
+      @driver.update(driver_params)
+    end
+>>>>>>> ccdee19573d7c7b2f8684c8d1b0182c1b7ebcdff
     render json: @driver.active
   end
 

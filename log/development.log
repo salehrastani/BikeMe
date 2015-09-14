@@ -21410,6 +21410,7 @@ LINE 1: ....locatable_id WHERE locatable_type = 'Driver' AND driver.act...
   [1m[36mDriver Load (0.4ms)[0m  [1mSELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1[0m
   [1m[35m (0.5ms)[0m  SELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id AND locatable_type = 'Driver' AND drivers.active = true
   [1m[36m (0.5ms)[0m  [1mSELECT locations.lat, locations.lng FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
+<<<<<<< HEAD
 
 
 Started GET "/drivers/locations" for ::1 at 2015-09-13 21:19:50 -0700
@@ -21499,3 +21500,5 @@ Processing by DriversController#activate as HTML
   [1m[36mSQL (0.1ms)[0m  [1mUPDATE "drivers" SET "token" = $1, "updated_at" = $2 WHERE "drivers"."id" = $3[0m  [["token", "90db62b4-aedd-41be-a256-037b5a65a7f4"], ["updated_at", "2015-09-14 04:26:17.343486"], ["id", 3]]
   [1m[35m (0.9ms)[0m  COMMIT
 Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+=======
+>>>>>>> ccdee19573d7c7b2f8684c8d1b0182c1b7ebcdff
