@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
 
-
+  # activate and deactivate drivers
   post 'drivers/activate' => 'drivers#activate'
+  # get all drivers locations
+  get 'drivers/locations' => 'locations#get_drivers_locations'
+  # get users location
   get 'passengers/location' => 'locations#get_passenger_location'
   get 'drivers/location' => 'locations#get_driver_location'
+  # set users location
   post 'passengers/location' => 'locations#set_passenger_location'
   post 'drivers/location' => 'locations#set_driver_location'
-  get 'drivers/locations' => 'locations#get_drivers_locations'
+
   post 'passengers/stripe' => 'passengers#stripe'
+
   post '/passengers/login'   => 'passengers#login'
 
   resources :passengers do
@@ -15,6 +20,7 @@ Rails.application.routes.draw do
   end
 
   post 'drivers/stripe' => 'drivers#stripe'
+
   post '/drivers/login' => 'drivers#login'
 
   resources :drivers do
