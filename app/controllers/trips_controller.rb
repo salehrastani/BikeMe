@@ -1,6 +1,8 @@
 class TripsController < ApplicationController
 
   def index
+    p "=================================================="
+    p request.headers["email"]
     @driver = current_driver
     @trips = Trip.where(driver_id: @driver.id, accepted:nil)
     if @trips == []
