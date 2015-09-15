@@ -5,10 +5,12 @@ class TripsController < ApplicationController
     p current_driver
     p request.headers["email"]
     @driver = current_driver
-    @trips = Trip.where(driver_id: @driver.id, accepted:nil)
+    trips = Trip.where(driver_id: @driver.id, accepted:nil)
     if @trips == []
-      render json: true
+      render nothing: true
     else
+      @trips = {trips: trips}
+      p @trips
       render json: @trips
     end
   end
