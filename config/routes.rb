@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   # trips routes
+  get  'trips' => 'trips#index'
   post 'trips' => 'trips#create'
+  put 'trips/:id' => 'trips#update'
   # activate and deactivate drivers
-  post 'drivers/activate' => 'drivers#activate'
+  post 'drivers/activity' => 'drivers#activity'
   # get all drivers locations
   get 'drivers/locations' => 'locations#get_drivers_locations'
   # get users location

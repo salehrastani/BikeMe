@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915050213) do
+ActiveRecord::Schema.define(version: 20150915052637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150915050213) do
     t.hstore   "origin"
     t.hstore   "destination"
     t.boolean  "complete",     default: false
+    t.boolean  "accepted"
   end
 
   create_table "vehicles", force: :cascade do |t|

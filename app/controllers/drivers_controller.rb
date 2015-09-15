@@ -45,13 +45,13 @@ class DriversController < ApplicationController
 
   def update
     @driver = current_driver
-    @driver.update(driver_params)
+    @driver.update_attributes(driver_params)
     render json: @driver
   end
 
-  def activate
+  def activity
     @driver = current_driver
-    @driver.update(driver_params)
+    @driver.update_attributes(driver_params)
     render json: @driver.active
   end
 
