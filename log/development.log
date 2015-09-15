@@ -42959,3 +42959,1220 @@ Processing by TripsController#index as HTML
   [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
   Rendered text template (0.0ms)
 Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:39:54 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:39:57 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:00 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:03 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:06 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:09 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:12 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:15 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:17 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:20 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:23 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:26 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:29 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:32 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:35 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:38 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:41 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:44 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:47 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:50 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:53 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:55 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:40:58 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:00 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:03 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:06 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:08 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:10 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:12 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:14 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:16 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:18 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:20 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:22 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:24 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:26 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:28 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:30 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:36 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:38 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:40 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:42 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.4ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:44 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:46 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:48 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:50 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:52 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:54 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:56 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:41:58 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:00 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:02 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:04 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:06 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:08 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:10 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:12 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:14 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:16 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:18 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:20 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:22 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:24 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:26 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:28 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:30 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:32 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:34 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:36 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:38 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:40 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:42 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:44 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:46 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:48 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:50 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.3ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:52 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:54 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:42:56 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.7ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.4ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 44ms (Views: 8.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:41 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (1.7ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:42 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/trips_controller.rb:8:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (41.5ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:43 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/trips_controller.rb:8:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:44 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/trips_controller.rb:8:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (35.6ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:45 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/trips_controller.rb:8:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (13.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:46 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/trips_controller.rb:8:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (28.7ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:47 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/trips_controller.rb:8:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (28.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:48 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/trips_controller.rb:8:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (99.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (131.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:49 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:50 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:51 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.5ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (1.0ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.1ms)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:52 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.3ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:53 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:54 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:55 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:56 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:57 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:58 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:58:59 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:00 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:01 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:09 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:11 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.3ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:13 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:15 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:17 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:19 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:21 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:23 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:25 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:27 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:29 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:31 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:33 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:35 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:37 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:40 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.8ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.3ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:42 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:44 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:46 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.9ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:48 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:50 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:52 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:54 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:56 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 12:59:58 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:01 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.4ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.3ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:04 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:07 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:10 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:13 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:16 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:19 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:22 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:25 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:28 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:30 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for ::1 at 2015-09-15 13:00:33 -0700
+Processing by TripsController#index as HTML
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."email" = $1 LIMIT 1  [["email", "d"]]
+  [1m[36mTrip Load (0.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."driver_id" = $1 AND "trips"."accepted" IS NULL[0m  [["driver_id", 3]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
