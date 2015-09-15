@@ -32,6 +32,11 @@ class LocationsController < ApplicationController
     render json: @driver.location
   end
 
+  def get_my_drivers_location
+    @driver = Driver.find(params[:id])
+    render json: @driver.location
+  end
+
   def get_drivers_locations
     if current_driver
        accounting_for_driver = " AND locatable_id != #{current_driver.id}"
