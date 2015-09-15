@@ -2,6 +2,7 @@ class TripsController < ApplicationController
 
   def index
     p "=================================================="
+    p current_driver
     p request.headers["email"]
     @driver = current_driver
     @trips = Trip.where(driver_id: @driver.id, accepted:nil)
