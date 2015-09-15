@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # trips routes
+  post 'trips' => 'trips#create'
   # activate and deactivate drivers
   post 'drivers/activate' => 'drivers#activate'
   # get all drivers locations

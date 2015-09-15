@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914012948) do
+ActiveRecord::Schema.define(version: 20150915043822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "drivers", force: :cascade do |t|
     t.string   "name"
@@ -61,8 +62,6 @@ ActiveRecord::Schema.define(version: 20150914012948) do
   end
 
   create_table "trips", force: :cascade do |t|
-    t.string   "origin"
-    t.string   "destination"
     t.string   "duration"
     t.integer  "price"
     t.integer  "driver_id"
@@ -70,6 +69,8 @@ ActiveRecord::Schema.define(version: 20150914012948) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.boolean  "complete"
+    t.hstore   "origin"
+    t.hstore   "destination"
   end
 
   create_table "vehicles", force: :cascade do |t|
