@@ -1,8 +1,8 @@
 class Driver < ActiveRecord::Base
-  has_many :trips
-  has_many :vehicles
-  has_many :ratings, as: :ratable
-  has_one :location, as: :locatable
+  has_many :trips, dependent: :destroy
+  has_many :vehicles, dependent: :destroy
+  has_many :ratings, as: :ratable, dependent: :destroy
+  has_one :location, as: :locatable, dependent: :destroy
 
   has_secure_password
   validates_confirmation_of :password, :message => "no-confirmation"
