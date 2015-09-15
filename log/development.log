@@ -26803,3 +26803,19 @@ Started GET "/drivers/locations" for ::1 at 2015-09-14 15:39:13 -0700
 Processing by LocationsController#get_drivers_locations as HTML
   [1m[36m (0.3ms)[0m  [1mSELECT locations.lat, locations.lng, locations.locatable_id FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true[0m
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.2ms)[0m  [1mSELECT locations.lat, locations.lng, locations.locatable_id FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true [0m
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("lat", "lng", "locatable_id", "locatable_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["lat", "37.861477"], ["lng", "-122.276306"], ["locatable_id", 3], ["locatable_type", "Driver"], ["created_at", "2015-09-15 00:44:04.241312"], ["updated_at", "2015-09-15 00:44:04.241312"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."locatable_id" = $1 AND "locations"."locatable_type" = $2 LIMIT 1  [["locatable_id", 3], ["locatable_type", "Driver"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."token" = $1  ORDER BY "drivers"."id" ASC LIMIT 1  [["token", "0f2274f2-d587-4248-9c0b-b3cf50072f84"]]
+  [1m[36mSQL (5.8ms)[0m  [1mUPDATE "drivers" SET "active" = $1, "token" = $2, "updated_at" = $3 WHERE "drivers"."id" = $4[0m  [["active", "t"], ["token", "0f2274f2-d587-4248-9c0b-b3cf50072f84"], ["updated_at", "2015-09-15 00:45:16.767273"], ["id", 3]]
+  [1m[35m (5.1ms)[0m  COMMIT
+  [1m[36m (9.2ms)[0m  [1mSELECT locations.lat, locations.lng, locations.locatable_id FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true AND locatable_id != current_driver_id[0m
+PG::UndefinedColumn: ERROR:  column "current_driver_id" does not exist
+LINE 1: ...er' AND drivers.active = true AND locatable_id != current_dr...
+                                                             ^
+: SELECT locations.lat, locations.lng, locations.locatable_id FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true AND locatable_id != current_driver_id
+  [1m[35m (0.5ms)[0m  SELECT locations.lat, locations.lng, locations.locatable_id FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true AND locatable_id != 3
