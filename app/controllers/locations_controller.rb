@@ -33,7 +33,8 @@ class LocationsController < ApplicationController
   end
 
   def get_drivers_locations
-    sql = "SELECT locations.lat, locations.lng, locations.locatable_id FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true"
+    current_driver_id = current_driver.id
+    sql = "SELECT locations.lat, locations.lng, locations.locatable_id FROM drivers inner join locations on drivers.id = locations.locatable_id WHERE locatable_type = 'Driver' AND drivers.active = true AND locatable_id != current_driver_id"
     query = ActiveRecord::Base.connection.execute(sql)
     if query.values == []
       render nothing: true
