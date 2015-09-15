@@ -27,6 +27,9 @@ class TripsController < ApplicationController
   end
 
   def update
+    @trip = Trip.find(params[:id])
+    @trip.update_attributes(trip_params)
+    render json: @trip
   end
 
   private
