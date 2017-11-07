@@ -47,8 +47,7 @@ This is an API for [BikeMe-Mobile](https://github.com/salehrastani/BikeMe-mobile
 
  - PostgreSQL
  - Ruby on Rails
- - Angular
- - Ionic
+
 
 
 
