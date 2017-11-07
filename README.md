@@ -24,10 +24,10 @@ This is an API for [BikeMe-Mobile](https://github.com/salehrastani/BikeMe-mobile
  - see their movement from origin to destination
  - rate the driver upon conclusion of ride
  
-### Drivers will be able to:
+### Drivers are be able to:
 
  - create an account
- - enter different cars for single account
+ - enter different motorcycles for single account
  - login and logout
  - enter financial credentials
  - receive ride requests from nearby passengers
