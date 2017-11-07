@@ -1,11 +1,11 @@
-#BikeMe
+# BikeMe
 
 This is an API for [BikeMe-Mobile](https://github.com/salehrastani/BikeMe-mobile) that will get you anywhere you wanna go within minutes. Imagine getting off of work and requesting a car from a ridesharing service at rush hour. The traffic is insane and you will be most probably paying a surged price. Meanwhile there are motorcycles splitting lanes and getting to wherever they want without a hassle. You could use BikeMe to get to where you wanna go in minutes.
 
 
-##User Stories:
+## User Stories:
 
-###Passengers will be able to:
+### Passengers will be able to:
 
  - create an account
  - login and logout
@@ -24,7 +24,7 @@ This is an API for [BikeMe-Mobile](https://github.com/salehrastani/BikeMe-mobile
  - see their movement from origin to destination
  - rate the driver upon conclusion of ride
  
-###Drivers will be able to:
+### Drivers will be able to:
 
  - create an account
  - enter different cars for single account
@@ -43,9 +43,12 @@ This is an API for [BikeMe-Mobile](https://github.com/salehrastani/BikeMe-mobile
  - get payed
 
 
-##Technologies:
+## Technologies:
 
  - PostgreSQL
  - Ruby on Rails
+ - Angular
+ - Ionic
+
 
 
