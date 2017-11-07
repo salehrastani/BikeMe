@@ -14,7 +14,7 @@ This is an API for [BikeMe-Mobile](https://github.com/salehrastani/BikeMe-mobile
    - put in address
    - put in destination
    - finalize request
-   - see picture of driver and drivers car
+   - see picture of driver and drivers motorcycle
    - see passengers average ratings
    - see ETA
  - cancel a ride
